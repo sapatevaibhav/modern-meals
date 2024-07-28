@@ -1,0 +1,38 @@
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.navbar-nav .nav-link {
+  margin: 0 10px;
+  color: black;
+  font-weight: bold;
+}
+
+.navbar-nav .nav-link.active {
+  border-bottom: 2px solid blue;
+}
+
+.navbar-logo {
+  height: 70px;
+}
+
+.dropdown-menu {
+  min-width: 200px;
+}
+
+.btn-primary {
+  background-color: #00148f;
+  border-color: #00148f;
+  border-radius: 20px;
+  padding: 5px 20px;
+}
+
+.navbar-nav {
+  align-items: center;
+}
+
+.navbar-brand {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
