@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Tangerine&family=Sedan&family=Roboto&display=swap');
+
+.carousel-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.image-container img {
+  max-height: 500px;
+  width: auto;
+}
+
+.options-container {
+  flex: 1;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.options-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.option {
+  font-family: 'Sedan', sans-serif;
+  cursor: pointer;
+  margin: 10px 0;
+  color: #6eacda;
+}
+
+.option.selected {
+  color: #00148f;
+}
+
+.content-container {
+  flex: 1;
+  padding: 0 20px;
+}
+
+.main-heading {
+  font-family: 'Tangerine', cursive;
+  color: #00148f;
+  text-align: center;
+  font-size: 48px;
+}
+
+.op-hline {
+  font-family: 'Roboto', cursive;
+  color: #00148f;
+  font-size: 36px;
+}
+
+
+.btn-primary {
+  font-family: 'Roboto', sans-serif;
+  background-color: #00148f;
+  border: none;
+}
