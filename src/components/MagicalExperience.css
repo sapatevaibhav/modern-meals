@@ -3,7 +3,7 @@
 .description,
 .main-heading,
 .option-headline {
-  text-align: center
+  text-align: center;
 }
 
 .carousel-container {
@@ -12,21 +12,21 @@
   justify-content: space-between;
   padding: 20px;
   flex-direction: row;
-  text-align: center
+  text-align: center;
 }
 
 .igc {
-  flex: 1.5
+  flex: 1.5;
 }
 
 .igc img {
   height: 600px !important;
-  width: auto
+  width: auto;
 }
 
 .options-container {
   flex: 1;
-  padding: 0 20px
+  padding: 0 20px;
 }
 
 .options-list {
@@ -34,7 +34,7 @@
   padding: 0;
   position: relative;
   left: 1px;
-  top: 113px
+  top: 113px;
 }
 
 .option {
@@ -42,12 +42,12 @@
   cursor: pointer;
   margin: 10px 0;
   color: #6eacda;
-  font-size: 2em
+  font-size: 2em;
 }
 
 .main-heading,
 .option.selected {
-  color: #00148f
+  color: #00148f;
 }
 
 .content-container {
@@ -55,7 +55,7 @@
   left: 3px;
   top: 122px;
   flex: 2;
-  padding: 20px
+  padding: 20px;
 }
 
 .main-heading {
@@ -73,19 +73,19 @@
 .option-headline {
   font-family: Roboto, cursive;
   color: #00148f;
-  font-size: 36px
+  font-size: 36px;
 }
 
 .btn-primary,
 .description {
-  font-family: Roboto, sans-serif
+  font-family: Roboto, sans-serif;
 }
 
 .btn-primary {
   background-color: #00148f;
   border: none;
   margin: 20px auto;
-  display: block
+  display: block;
 }
 
 @media (max-width: 768px) {
@@ -97,20 +97,57 @@
     padding-left: 0;
     display: flex;
     width: 100%;
-    /* word-wrap: break-word;  */
-    /* overflow-wrap: break-word;  */
+    overflow-wrap: break-word;
     font-size: 4em;
   }
 
   .igc img {
     height: 400px !important;
-    width: auto
+    width: auto;
   }
 
   .options-list,
   .main-heading,
   .content-container {
+    top: 0;
+    left: 0;
+  }
+}
 
+@media (max-width: 968px) {
+  .main-heading {
+    top: 0;
+    left: 0;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    font-size: 3vw;
+  }
+}
+
+@media (min-width: 766px) and (max-width: 1300px) {
+  .main-heading {
+    padding-left: 0;
+    display: flex;
+    width: 100%;
+    overflow-wrap: break-word;
+    font-size: 5em;
+    left: 0;
+    top: 100px;
+    justify-content: center;
+  }
+
+  .carousel-container {
+    flex-direction: column;
+  }
+
+  .igc img {
+    height: 500px !important;
+    width: auto;
+  }
+
+  .options-list,
+  .main-heading,
+  .content-container {
     top: 0;
     left: 0;
   }
