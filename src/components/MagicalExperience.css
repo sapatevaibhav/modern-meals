@@ -1,5 +1,3 @@
-@import url(https://fonts.googleapis.com/css2?family=Tangerine&family=Sedan&family=Roboto&display=swap);
-
 .description,
 .main-heading,
 .option-headline {
@@ -102,7 +100,8 @@
     overflow-wrap: break-word;
     font-size: 4em;
   }
-  .description{
+
+  .description {
     min-height: 250px;
   }
 

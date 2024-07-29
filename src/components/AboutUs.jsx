@@ -42,9 +42,9 @@ const AboutUs = () => {
           </div>
           <div className="contacts">
             <h3>Contacts</h3>
-            <p>address: B-151 North Ex-Mall, Sector-9, Rohini, Pune-411010</p>
-            <p>phone: +91 - 8800209900, 8800479900</p>
-            <p>email: info@modernmeals.com</p>
+            <p>Address: B-151 North Ex-Mall, Sector-9, Rohini, Pune-411010</p>
+            <p>Phone: +91 - 8800209900, 8800479900</p>
+            <p>Email: info@modernmeals.com</p>
           </div>
         </div>
       </div>
