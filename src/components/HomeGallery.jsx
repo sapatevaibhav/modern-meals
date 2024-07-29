@@ -11,10 +11,10 @@ import image8 from "/home_gallery/image_8.png";
 
 const GalleryContainer = styled.div`
   background-color: #f1f7fb;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
+  border-top-left-radius: 75px;
+  border-top-right-radius: 75px;
   padding: 20px;
-  margin: 50px 70px;
+  margin: 50px 50px;
   text-align: center;
 `;
 
