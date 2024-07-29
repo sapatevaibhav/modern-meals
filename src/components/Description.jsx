@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import "./Description.css"; // Import your CSS file
+import "./Description.css"; 
 
 const images = [
-  "/curved_image_1.png", // replace with actual image paths
+  "/curved_image_1.png", 
   "/curved_image_2.png",
   "/curved_image_3.png",
 ];
@@ -12,7 +12,7 @@ const Carousel = () => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setFadeIn(false); // Start fade-out
+      setFadeIn(false); 
       setTimeout(() => {
         setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
         setFadeIn(true);
