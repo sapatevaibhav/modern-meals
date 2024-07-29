@@ -42,37 +42,38 @@ const MagicalExperience = () => {
     setIndex(selectedIndex);
   };
 
-  // Extract and format the title
   const title = carouselItems[index]?.title?.toUpperCase();
 
   return (
-    <div className="carousel-container">
-      <div className="image-container">
-        <img
-          src={carouselItems[index].image}
-          alt={carouselItems[index].title}
-        />
+    <>
+      <h1 className="main-heading">Making Every Experience Magical</h1>
+      <div className="carousel-container">
+        <div className="image-container igc">
+          <img
+            src={carouselItems[index].image}
+            alt={carouselItems[index].title}
+          />
+        </div>
+        <div className="options-container">
+          <ul className="options-list">
+            {carouselItems.map((item, itemIndex) => (
+              <li
+                key={itemIndex}
+                className={`option ${itemIndex === index ? "selected" : ""}`}
+                onClick={() => handleSelect(itemIndex)}
+              >
+                {item.title.split(" ")[0]}
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div className="content-container">
+          <h3 className="option-headline">{title}</h3>
+          <p className="description">{carouselItems[index].description}</p>
+          <button className="btn btn-primary">LEARN MORE</button>
+        </div>
       </div>
-      <div className="options-container">
-        <h1 className="main-heading">Making Every Experience Magical</h1>
-        <ul className="options-list">
-          {carouselItems.map((item, itemIndex) => (
-            <li
-              key={itemIndex}
-              className={`option ${itemIndex === index ? "selected" : ""}`}
-              onClick={() => handleSelect(itemIndex)}
-            >
-              {item.title.split(" ")[0]}
-            </li>
-          ))}
-        </ul>
-      </div>
-      <div className="content-container">
-        <h3 className="headline op-hline">{title}</h3>
-        <p className="description">{carouselItems[index].description}</p>
-        <button className="btn btn-primary">LEARN MORE</button>
-      </div>
-    </div>
+    </>
   );
 };
 

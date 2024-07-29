@@ -1,60 +1,117 @@
-@import url('https://fonts.googleapis.com/css2?family=Tangerine&family=Sedan&family=Roboto&display=swap');
+@import url(https://fonts.googleapis.com/css2?family=Tangerine&family=Sedan&family=Roboto&display=swap);
+
+.description,
+.main-heading,
+.option-headline {
+  text-align: center
+}
 
 .carousel-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 20px;
+  flex-direction: row;
+  text-align: center
 }
 
-.image-container img {
-  max-height: 500px;
-  width: auto;
+.igc {
+  flex: 1.5
+}
+
+.igc img {
+  height: 600px !important;
+  width: auto
 }
 
 .options-container {
   flex: 1;
-  padding: 0 20px;
-  text-align: center;
+  padding: 0 20px
 }
 
 .options-list {
   list-style-type: none;
   padding: 0;
+  position: relative;
+  left: 1px;
+  top: 113px
 }
 
 .option {
-  font-family: 'Sedan', sans-serif;
+  font-family: Sedan, sans-serif;
   cursor: pointer;
   margin: 10px 0;
   color: #6eacda;
+  font-size: 2em
 }
 
+.main-heading,
 .option.selected {
-  color: #00148f;
+  color: #00148f
 }
 
 .content-container {
-  flex: 1;
-  padding: 0 20px;
+  position: relative;
+  left: 3px;
+  top: 122px;
+  flex: 2;
+  padding: 20px
 }
 
 .main-heading {
-  font-family: 'Tangerine', cursive;
-  color: #00148f;
-  text-align: center;
-  font-size: 48px;
+  font-family: Tangerine, cursive;
+  font-size: 6em;
+  padding-left: 50%;
+  width: 1367px;
+  transform: translate(-1px);
+  position: relative;
+  left: -41px;
+  top: 275px;
+  transition: none;
 }
 
-.op-hline {
-  font-family: 'Roboto', cursive;
+.option-headline {
+  font-family: Roboto, cursive;
   color: #00148f;
-  font-size: 36px;
+  font-size: 36px
 }
 
+.btn-primary,
+.description {
+  font-family: Roboto, sans-serif
+}
 
 .btn-primary {
-  font-family: 'Roboto', sans-serif;
   background-color: #00148f;
   border: none;
+  margin: 20px auto;
+  display: block
+}
+
+@media (max-width: 768px) {
+  .carousel-container {
+    flex-direction: column;
+  }
+
+  .main-heading {
+    padding-left: 0;
+    display: flex;
+    width: 100%;
+    /* word-wrap: break-word;  */
+    /* overflow-wrap: break-word;  */
+    font-size: 4em;
+  }
+
+  .igc img {
+    height: 400px !important;
+    width: auto
+  }
+
+  .options-list,
+  .main-heading,
+  .content-container {
+
+    top: 0;
+    left: 0;
+  }
 }
