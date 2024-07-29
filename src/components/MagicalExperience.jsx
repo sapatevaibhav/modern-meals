@@ -5,7 +5,8 @@ const carouselItems = [
   {
     image: "bullet_image_1.png",
     title: "Weddings",
-    description: `And when it comes down to choosing the most professionally managed Wedding Caterers organizers, there are not many who can stand in the same league as Modern Caterers. Modern Caterers enjoy the rare distinction of being an all-in-one organizer for all types of functions that our clients could think of hosting.`,
+    description:
+      "And when it comes down to choosing the most professionally managed Wedding Caterers organizers, there are not many who can stand in the same league as Modern Caterers. Modern Caterers enjoy the rare distinction of being an all-in-one organizer for all types of functions that our clients could think of hosting.",
   },
   {
     image: "bullet_image_2.png",
