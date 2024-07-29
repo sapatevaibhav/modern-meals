@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&family=Tangerine:wght@700&display=swap');
+@import url(https://fonts.googleapis.com/css2?family=Roboto:wght@400&family=Tangerine:wght@700&display=swap);
 
 .imaage-container {
   display: flex;
@@ -6,42 +6,40 @@
   justify-content: center;
   align-items: center;
   font-family: Roboto, sans-serif;
-  padding: 20px;
+  padding: 20px
 }
 
 .text-container {
   flex: 1;
   max-width: 100%;
   padding-right: 0;
-  text-align: center;
+  text-align: center
 }
 
 .image-container {
-  max-width: 100%;
+  max-width: 100%
 }
 
 .d-hline {
   font-family: Tangerine, cursive;
   font-size: 4em;
-  margin: 80px 0px 0px 0px;
-  color: #00148f;
+  margin: 80px 0 0;
+  color: #00148f
 }
 
 .imaage-image {
-  /* height: 65%; */
-  /* width: auto; */
-  margin: 80px 0px 0px 0px;
+  margin: 80px 0 0;
   transition: opacity 1s ease-in-out;
-  opacity: 0;
+  opacity: 0
 }
 
 .imaage-image.fade-in {
-  opacity: 1;
+  opacity: 1
 }
 
 .paragraph {
   margin: 20px 0;
-  font-size: 1em;
+  font-size: 1em
 }
 
 .contact-button {
@@ -52,61 +50,68 @@
   border-radius: 5px;
   cursor: pointer;
   font-size: 1em;
-  font-family: Roboto, sans-serif;
+  font-family: Roboto, sans-serif
 }
 
 .contact-button:hover {
-  background-color: #000c6e;
+  background-color: #000c6e
 }
 
-@media (max-width: 375px) {
+@media (max-width:375px) {
   .imaage-image {
     height: 250px !important;
-    width: auto !important;
+    width: auto !important
   }
 }
 
-@media (min-width: 768px) {
+@media (max-width:768px) {
+  .imaage-image {
+    height: 375px !important;
+    width: auto !important
+  }
+}
+
+@media (min-width:768px) {
   .imaage-container {
-    flex-direction: row;
+    flex-direction: row
   }
 
   .d-hline {
-    font-size: 6em;
+    font-size: 6em
   }
 
   .text-container {
     max-width: 50%;
-    padding-right: 20px;
+    padding-right: 20px
   }
 
   .imaage-image {
     height: 300px !important;
-    width: auto !important;
+    width: auto !important
   }
 
   .image-container {
-    max-width: 50%;
+    max-width: 50%
   }
 }
 
-@media (max-width: 550px) {
+@media (max-width:550px) {
   .imaage-image {
     height: 300px !important;
-    width: auto !important;
+    width: auto !important
   }
 }
 
-@media (min-width: 1000px) {
+@media (min-width:1000px) {
   .imaage-image {
     height: 375px !important;
-    width: auto !important;
+    width: auto !important
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width:1200px) {
   .imaage-image {
     height: 450px !important;
-    width: auto !important;
+    width: auto !important
   }
 }
