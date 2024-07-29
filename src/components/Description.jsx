@@ -6,7 +6,7 @@ const images = [
   "/curved_image_2.png",
   "/curved_image_3.png",
 ];
-const Carousel = () => {
+const imaage = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [fadeIn, setFadeIn] = useState(true);
 
@@ -23,7 +23,7 @@ const Carousel = () => {
   }, []);
 
   return (
-    <div className="carousel-container">
+    <div className="imaage-container">
       <div className="text-container">
         <h1 className="headline d-hline">Wedding Caterers in Pune</h1>
         <p className="paragraph">
@@ -48,11 +48,11 @@ const Carousel = () => {
         <img
           src={images[currentImageIndex]}
           alt="Catering"
-          className={`carousel-image ${fadeIn ? "fade-in" : ""}`}
+          className={`imaage-image ${fadeIn ? "fade-in" : ""}`}
         />
       </div>
     </div>
   );
 };
 
-export default Carousel;
+export default imaage;

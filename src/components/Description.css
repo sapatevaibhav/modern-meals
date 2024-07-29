@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&family=Tangerine:wght@700&display=swap');
 
-.carousel-container {
+.imaage-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -17,26 +17,25 @@
 }
 
 .image-container {
-  flex: 1;
   max-width: 100%;
 }
 
 .d-hline {
   font-family: Tangerine, cursive;
-  font-size: 6em;
+  font-size: 4em;
   margin: 80px 0px 0px 0px;
   color: #00148f;
 }
 
-.carousel-image {
-  height: 70%;
+.imaage-image {
+  height: 65%;
   width: auto;
   margin: 80px 0px 0px 0px;
   transition: opacity 1s ease-in-out;
   opacity: 0;
 }
 
-.carousel-image.fade-in {
+.imaage-image.fade-in {
   opacity: 1;
 }
 
@@ -61,18 +60,24 @@
 }
 
 @media (min-width: 768px) {
-  .carousel-container {
+  .imaage-container {
     flex-direction: row;
+  }
+
+  .d-hline {
+    font-size: 6em;
   }
 
   .text-container {
     max-width: 50%;
     padding-right: 20px;
   }
-.carousel-image{
-  height:  100% !important;
-  width:   auto !important;
-}
+
+  .imaage-image {
+    height: 100% !important;
+    width: auto !important;
+  }
+
   .image-container {
     max-width: 50%;
   }
