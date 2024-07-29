@@ -16,7 +16,7 @@ const Carousel = () => {
       setTimeout(() => {
         setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
         setFadeIn(true);
-      }, 500);
+      }, 1000);
     }, 3000);
 
     return () => clearInterval(interval);
@@ -25,7 +25,7 @@ const Carousel = () => {
   return (
     <div className="carousel-container">
       <div className="text-container">
-        <h1 className="headline">Wedding Caterers in Pune</h1>
+        <h1 className="headline d-hline">Wedding Caterers in Pune</h1>
         <p className="paragraph">
           In the context of this current social scenario in india, it is not
           surprising that the demand for top quality function organizers is
