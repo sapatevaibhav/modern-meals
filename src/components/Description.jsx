@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
-import "./Description.css"; 
+import "./Description.css";
+import { Link } from "react-router-dom";
 
 const images = [
-  "/curved_image_1.png", 
+  "/curved_image_1.png",
   "/curved_image_2.png",
   "/curved_image_3.png",
 ];
@@ -12,7 +13,7 @@ const imaage = () => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setFadeIn(false); 
+      setFadeIn(false);
       setTimeout(() => {
         setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
         setFadeIn(true);
@@ -42,7 +43,9 @@ const imaage = () => {
           organizer for all types of functions that our clients could think of
           hosting.
         </p>
-        <button className="contact-button">CONTACT US</button>
+        <Link to="/contact">
+          <button className="contact-button">CONTACT US</button>
+        </Link>
       </div>
       <div className="image-container">
         <img

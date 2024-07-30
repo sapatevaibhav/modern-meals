@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./MagicalExperience.css";
+import { Link } from "react-router-dom";
 
 const carouselItems = [
   {
@@ -71,7 +72,9 @@ const MagicalExperience = () => {
         <div className="content-container">
           <h3 className="option-headline">{title}</h3>
           <p className="description">{carouselItems[index].description}</p>
-          <button className="btn btn-primary">LEARN MORE</button>
+          <Link to="/services">
+            <button className="btn btn-primary">LEARN MORE</button>
+          </Link>
         </div>
       </div>
     </>
