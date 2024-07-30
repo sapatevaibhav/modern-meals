@@ -1,27 +1,31 @@
-import React from "react";
-import "./App.css";
-import AboutUs from "./components/AboutUs";
-import CateringBanner from "./components/CateringBanner";
-import Carousel from "./components/Description";
-import Gallery from "./components/HomeGallery";
-import MagicalExperience from "./components/MagicalExperience";
-import Navbar from "./components/Navbar";
-import Testimonials from "./components/Testimonials";
-import GetInTouch from "./components/ContactUs";
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import HomePage from './pages/HomePage';
+import AboutUsPage from './pages/AboutUsPage';
+import ServicesPage from './pages/ServicesPage';
+import MenuPage from './pages/MenuPage';
+import GalleryPage from './pages/GalleryPage';
+import ContactUsPage from './pages/ContactUsPage';
+import TestimonialsPage from './pages/TestimonialsPage';
+import AboutUs from './components/AboutUs';
 
-function App() {
+const App = () => {
   return (
-    <>
+    <Router>
       <Navbar />
-      <CateringBanner />
-      <Carousel />
-      <MagicalExperience />
-      <Gallery />
-      <Testimonials />
-      <GetInTouch/>
-      <AboutUs />
-    </>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/about" element={<AboutUsPage />} />
+        <Route path="/services" element={<ServicesPage />} />
+        <Route path="/menu" element={<MenuPage />} />
+        <Route path="/gallery" element={<GalleryPage />} />
+        <Route path="/contact" element={<ContactUsPage />} />
+        <Route path="/testimonials" element={<TestimonialsPage />} />
+      </Routes>
+      <AboutUs/>
+    </Router>
   );
-}
+};
 
 export default App;

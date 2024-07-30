@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { NavLink } from "react-router-dom";
 import "./Navbar.css";
 
 const Navbar = () => {
@@ -41,19 +42,19 @@ const Navbar = () => {
           >
             <ul className="navbar-nav me-auto">
               <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="/">
+                <NavLink className="nav-link" to="/" end>
                   HOME
-                </a>
+                </NavLink>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/about">
+                <NavLink className="nav-link" to="/about">
                   ABOUT US
-                </a>
+                </NavLink>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/services">
+                <NavLink className="nav-link" to="/services">
                   SERVICES
-                </a>
+                </NavLink>
               </li>
             </ul>
             <div className="navbar-brand mx-auto d-none d-lg-block">
@@ -65,38 +66,38 @@ const Navbar = () => {
             </div>
             <ul className="navbar-nav ms-auto">
               <li className="nav-item dropdown">
-                <a
+                <NavLink
                   className="nav-link dropdown-toggle"
-                  href="/menu"
+                  to="/menu"
                   id="navbarDropdown"
                   role="button"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
                   MENU
-                </a>
+                </NavLink>
                 <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
                   <li>
-                    <a className="dropdown-item" href="/menu1">
+                    <NavLink className="dropdown-item" to="/menu1">
                       Menu 1
-                    </a>
+                    </NavLink>
                   </li>
                   <li>
-                    <a className="dropdown-item" href="/menu2">
+                    <NavLink className="dropdown-item" to="/menu2">
                       Menu 2
-                    </a>
+                    </NavLink>
                   </li>
                 </ul>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/gallery">
+                <NavLink className="nav-link" to="/gallery">
                   GALLERY
-                </a>
+                </NavLink>
               </li>
               <li className="nav-item">
-                <a href="/contact" className="btn btn-primary">
+                <NavLink to="/contact" className="btn btn-primary">
                   CONTACT US
-                </a>
+                </NavLink>
               </li>
             </ul>
           </div>
