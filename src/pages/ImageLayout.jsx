@@ -6,10 +6,24 @@ import image3 from "/about_3.png";
 
 const ImageLayout = () => {
   return (
-    <div className="image-layout">
-      <img src={image1} alt="Image 1" className="img1" />
-      <img src={image2} alt="Image 2" className="img2" />
-      <img src={image3} alt="Image 3" className="img3" />
+    <div className="container image-container">
+      <div className="position-relative">
+        <img
+          src={image1}
+          alt="Image 1"
+          className="img-fluid position-absolute img1"
+        />
+        <img
+          src={image2}
+          alt="Image 2"
+          className="img-fluid position-absolute img2"
+        />
+        <img
+          src={image3}
+          alt="Image 3"
+          className="img-fluid position-absolute img3"
+        />
+      </div>
     </div>
   );
 };

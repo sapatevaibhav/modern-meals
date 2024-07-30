@@ -53,6 +53,47 @@ export default function AboutUsPage() {
         </div>
         <ImageLayout />
       </div>
+      <div
+        className="container-fluid text-white p-5 dark-container"
+        style={{ backgroundColor: "#00148f" }}
+      >
+        <div className="row">
+          <div className="col-md-4">
+            <h2 className="sedanand">The freedom of choosing the best</h2>
+            <p className="roboto">
+              When you select Red Chilli Caterers to organize your special
+              functions, you can be sure of laying your hands on the best
+              available resources for the evening. The best of food, the best of
+              services, the best of decoration, the best of attention to every
+              detail, and every other arrangement you have ordered for the
+              special occasion.
+            </p>
+          </div>
+          <div className="col-md-4">
+            <h2 className="sedanand">Assurance of the finest quality</h2>
+            <p className="roboto">
+              If we dare to call ourselves Red Chilli Caterers, we also strive
+              to make sure that all our clients are treated like royalty, and
+              they get that imperial taste in all aspects of our catering
+              services. We are able to achieve such high standards by strictly
+              adhering to the dictum of zero compromise on quality in every
+              single process of our operations.
+            </p>
+          </div>
+          <div className="col-md-4">
+            <h2 className="sedanand">Utmost consideration to finer points</h2>
+            <p className="roboto">
+              We at Red Chilli Caterers always believe in doing as our client
+              would ask us to do. We always take a larger perspective of things
+              while implementing the list of things to be done during a
+              function. But this doesn't mean that we miss the smaller details
+              in handling a large function. Every aspect of the event is looked
+              at both subjectively and objectively before giving the go-ahead
+              nod for the function.
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

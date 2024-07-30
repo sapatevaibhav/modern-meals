@@ -1,35 +1,36 @@
+.center-text,
+.des-text,
+.mission-container {
+  text-align: center
+}
+
 .about-us-page {
   font-family: sedan, sans-serif;
   color: #000;
   padding: 20px;
   max-width: 1100px;
-  margin: 0 auto;
+  margin: 0 auto
 }
 
-.who-we-are,
 .our-vision,
-.team-photo {
-  margin-bottom: 40px;
-}
-
-.center-text {
-  text-align: center;
+.team-photo,
+.who-we-are {
+  margin-bottom: 40px
 }
 
 .des-text {
   font-family: roboto, sans-serif;
   font-size: 1.2em;
-  line-height: 1.6;
-  text-align: center;
+  line-height: 1.6
 }
 
-.who-we-are h2,
-.our-vision h2 {
+.our-vision h2,
+.who-we-are h2 {
   font-size: 5rem;
   font-family: Tangerine, cursive;
-  color: #1E3A8A;
+  color: #1e3a8a;
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 20px
 }
 
 .team-photo .photo-placeholder {
@@ -41,7 +42,7 @@
   align-items: center;
   font-size: 4em;
   color: #000;
-  font-family: Tangerine, cursive;
+  font-family: Tangerine, cursive
 }
 
 .mission-container {
@@ -49,49 +50,61 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  padding: 20px;
+  padding: 20px
 }
 
 .mission-text {
-  width: 50%;
+  width: 50%
 }
 
 .mission-text h4 {
   font-size: 1.5em;
   font-family: sedan, cursive;
-  color: #333;
+  color: #333
 }
 
 .mission-text h2 {
   font-size: 5rem;
-  color: #1E3A8A;
-  font-family: 'Tangerine', cursive;
+  color: #1e3a8a;
+  font-family: Tangerine, cursive
 }
 
 .mission-text p {
   font-size: 1.2em;
   line-height: 1.6;
-  color: #333;
+  color: #333
 }
 
 .btn-primary {
-  background-color: #1E3A8A;
+  background-color: #1e3a8a;
   border: none;
   font-size: 1em;
-  padding: 10px 20px;
+  padding: 10px 20px
 }
 
-@media (max-width: 768px) {
+@media (max-width:768px) {
   .mission-container {
-    flex-direction: column;
+    flex-direction: column
   }
 
   .mission-text {
-    width: 100%;
+    width: 100%
   }
 
   .image-layout-container {
     width: 100%;
-    margin-top: 20px;
+    margin-top: 20px
   }
+}
+
+.sedanand {
+  font-family: Sedan, serif;
+  font-size: 2rem;
+  margin-bottom: 1rem
+}
+
+.roboto {
+  font-family: Roboto, sans-serif;
+  font-size: 1rem;
+  text-align: justify
 }
