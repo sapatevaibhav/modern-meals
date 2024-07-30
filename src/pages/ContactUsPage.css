@@ -1,0 +1,70 @@
+.contact-cont {
+  background-color: #00148f;
+  padding-top: 120px;
+  padding-bottom: 20px;
+  max-width: 1140px;
+  margin-top: -100px
+}
+
+.contact-title {
+  font-family: Tangerine, cursive;
+  color: #00148f;
+  font-size: 5rem
+}
+
+.contact-subtitle {
+  font-family: Sedan, serif;
+  color: #000;
+  font-size: 1.2em
+}
+
+.contact-image-container {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin-top: 0
+}
+
+.contact-image {
+  border-radius: 15px;
+  width: 40%;
+  height: auto;
+  object-fit: cover;
+  position: relative;
+  top: 0
+}
+
+.contact-form-title {
+  font-family: Tangerine, cursive;
+  color: #fff;
+  font-size: 5rem
+}
+
+.contact-form-subtitle {
+  font-family: "Sedan, serif";
+  color: #fff
+}
+
+.abcd {
+  color: #fff
+}
+
+.contact-submit-button {
+  background-color: #fff;
+  color: #00148f;
+  font-family: "Roboto, sans-serif";
+  margin-bottom: 100px
+}
+
+.cpmtact-us {
+  padding-top: 0;
+  padding-right: 50px;
+  padding-left: 50px
+}
+
+.leaf-container {
+  height: 500px;
+  max-width: 1160px;
+  margin-top: 30px;
+  margin-bottom: 30px
+}
