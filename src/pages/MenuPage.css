@@ -1,0 +1,117 @@
+.center-text,
+.ff-sedan {
+  text-align: center
+}
+
+.khomchas-list li,
+.section h3,
+.starters-sections .section h3 {
+  margin-bottom: 10px;
+  font-size: 1.2em
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(6, auto);
+  gap: 0;
+  width: 95%;
+  margin: auto
+}
+
+.tile {
+  position: relative
+}
+
+.blue-bg {
+  background-color: #00148f;
+  color: #fff
+}
+
+.khomchas,
+.text-tile {
+  padding: 20px
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0;
+  padding: 0
+}
+
+.mt-5 {
+  margin-top: 5rem
+}
+
+.desserts {
+  margin-bottom: 30px
+}
+
+.ff-sedan {
+  font-family: sedan;
+  font-size: 3rem
+}
+
+.beverage-sections,
+.starters-sections {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px
+}
+
+.section,
+.starters-sections .section {
+  flex: 1 1 calc(33.333% - 20px);
+  min-width: 175px
+}
+
+.khomchas-list,
+.section ul,
+.starters-sections .section ul {
+  list-style-type: disc;
+  padding-left: 20px
+}
+
+.section ul li,
+.starters-sections .section ul li {
+  margin-bottom: 5px
+}
+
+.menu-description {
+  display: block;
+  font-size: .9em
+}
+
+@media (max-width:768px) {
+  .menu-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(12, auto)
+  }
+
+  .m-below {
+    margin-bottom: 25px
+  }
+
+  .section,
+  .starters-sections .section {
+    flex: 1 1 calc(50% - 20px)
+  }
+
+  .starters-sections {
+    flex-direction: column
+  }
+
+  .starters-sections .section:nth-child(3) {
+    flex: 1 1 100%
+  }
+}
+
+@media (max-width:480px) {
+
+  .section,
+  .starters-sections .section {
+    flex: 1 1 100%
+  }
+}

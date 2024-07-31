@@ -65,7 +65,7 @@ const Navbar = () => {
               />
             </div>
             <ul className="navbar-nav ms-auto">
-              <li className="nav-item dropdown">
+              {/* <li className="nav-item dropdown">
                 <NavLink
                   className="nav-link dropdown-toggle"
                   to="/menu"
@@ -88,6 +88,11 @@ const Navbar = () => {
                     </NavLink>
                   </li>
                 </ul>
+              </li> */}
+              <li className="nav-item">
+                <NavLink className="nav-link" to="/menu">
+                  MENU
+                </NavLink>
               </li>
               <li className="nav-item">
                 <NavLink className="nav-link" to="/gallery">
