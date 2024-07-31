@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./GalleryPage.css";
 
 const images = [
@@ -15,7 +15,21 @@ const images = [
   "gellery/image11.png",
   "gellery/image12.png",
 ];
+
 export default function GalleryPage() {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const ca_images = [
+    "gellery/long_image1.png",
+    "gellery/long_image1.png",
+    "gellery/long_image1.png",
+    "gellery/long_image1.png",
+    "gellery/long_image1.png",
+  ];
+
+  const handleIndicatorClick = (index) => {
+    setActiveIndex(index);
+  };
+
   return (
     <div>
       <p
@@ -27,7 +41,12 @@ export default function GalleryPage() {
       <h2 className="gallery-heading">Menu Make You Happy</h2>
       <p
         className="center-text"
-        style={{ fontFamily: "roboto", fontSize: "1.2rem", fontWeight: "bold", marginBottom:"50px"}}
+        style={{
+          fontFamily: "roboto",
+          fontSize: "1.2rem",
+          fontWeight: "bold",
+          marginBottom: "50px",
+        }}
       >
         Some Food with lots of Love
       </p>
@@ -87,6 +106,41 @@ export default function GalleryPage() {
               </div>
             </div>
           </div>
+        </div>
+      </div>
+      <div
+        id="carouselExampleIndicators"
+        className="carousel slide"
+        data-ride="carousel"
+      >
+        <div className="carousel-inner">
+          {ca_images.map((image, index) => (
+            <div
+              key={index}
+              className={`carousel-item ${
+                index === activeIndex ? "active" : ""
+              }`}
+            >
+              <img src={image} className="d-block w-100" alt={`Slide ${index + 1}`} />
+            </div>
+          ))}
+        </div>
+        <div className="d-flex justify-content-center mt-3">
+          {ca_images.map((_, index) => (
+            <div
+              key={index}
+              onClick={() => handleIndicatorClick(index)}
+              style={{
+                width: "12px",
+                height: "12px",
+                backgroundColor:
+                  activeIndex === index ? "darkblue" : "blue",
+                margin: "0 5px",
+                borderRadius: "50%",
+                cursor: "pointer"
+              }}
+            ></div>
+          ))}
         </div>
       </div>
     </div>

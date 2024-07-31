@@ -24,6 +24,12 @@
     flex: 0 0 50%;
     max-width: 50%;
   }
+
+  .carousel {
+    margin-right: 25px !important;
+    margin-left: 25px !important;
+    height: 300px !important;
+  }
 }
 
 @media (min-width: 768px) {
@@ -31,4 +37,27 @@
     flex: 0 0 25%;
     max-width: 25%;
   }
+}
+
+.carousel {
+  margin: auto;
+  max-width: 800px;
+  height: 500px !important;
+  width: auto;
+}
+
+.carousel-indicators {
+  bottom: -30px;
+}
+
+.carousel-indicators li {
+  background-color: lightblue;
+  border-radius: 50%;
+  width: 12px;
+  height: 12px;
+  margin: 1px;
+}
+
+.carousel-indicators .active {
+  background-color: darkblue;
 }
