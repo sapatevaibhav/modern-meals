@@ -1,0 +1,106 @@
+.services_container {
+  background: url("/fork.png") no-repeat center center;
+  background-size: cover;
+  margin-bottom: 200px;
+}
+
+.service-cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.service-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 600px;
+}
+
+.service-image {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.service-text {
+  margin: 10px 0;
+  width: 300px;
+
+}
+
+.service-card h3 {
+  margin: 10px 0;
+  color: #1a3eb5;
+}
+
+.learn-more {
+  color: #1a3eb5;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+@media (min-width: 600px) {
+  .service-card {
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+  }
+
+  .service-image {
+    width: 50%;
+    margin: 0;
+  }
+
+  .service-text {
+    width: 50%;
+    padding: 0 10px;
+  }
+}
+
+@media (max-width: 900px) {
+  .ali-right {
+    text-align: center !important;
+  }
+}
+
+@media (min-width: 900px) {
+  .service-card:nth-child(odd) {
+    flex-direction: row;
+  }
+
+  .service-card:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+}
+
+@media (max-width: 600px) {
+  .service-cards-container {
+    flex-direction: column;
+  }
+
+  .service-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 300px;
+  }
+
+  .service-image {
+    width: 100%;
+  }
+
+  .service-text {
+    width: 100%;
+    padding: 0;
+  }
+
+}
+
+.ali-right {
+  text-align: right;
+}

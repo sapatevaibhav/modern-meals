@@ -123,6 +123,7 @@ export default function ContactComponent() {
             <button
               type="submit"
               className="btn btn-primary contact-submit-button"
+              style={{ color: "black", fontFamily: "roboto" }}
             >
               SUBMIT
             </button>
