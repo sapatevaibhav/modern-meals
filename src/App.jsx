@@ -29,6 +29,7 @@ const App = () => {
         <Route path="/contact" element={<ContactUsPage />} />
         <Route path="/testimonials" element={<TestimonialsPage />} />
         <Route path="/all_services/:index" element={<ServiceWrapper />} />
+        <Route path="/all_services" element={<ServiceWrapper />} />
       </Routes>
       <AboutUs />
     </Router>
@@ -36,7 +37,7 @@ const App = () => {
 };
 
 function ServiceWrapper() {
-  const { index } = useParams();
+  const { index } = useParams(0);
   return <Services initialImageIndex={parseInt(index, 10)} />;
 }
 
