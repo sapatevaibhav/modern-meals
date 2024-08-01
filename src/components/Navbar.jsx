@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import "./Navbar.css";
 
@@ -9,16 +9,39 @@ const Navbar = () => {
     setCollapsed(!collapsed);
   };
 
+  const handleClose = () => {
+    setCollapsed(true);
+  };
+
+  useEffect(() => {
+    document.body.style.overflow = collapsed ? "auto" : "hidden";
+
+    const handleResize = () => {
+      if (window.innerWidth >= 850) {
+        setCollapsed(true);
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, [collapsed]);
+
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+    <nav
+      className="navbar navbar-expand-lg navbar-light bg-white shadow-sm"
+      style={{ backgroundColor: "#6ceaf9" }}
+    >
       <div className="container-fluid">
         <div className="d-flex justify-content-between w-100">
           <button
             className="navbar-toggler"
             type="button"
             data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
+            data-bs-target="#navbarNavResponsive"
+            aria-controls="navbarNavResponsive"
             aria-expanded={!collapsed}
             aria-label="Toggle navigation"
             onClick={handleToggle}
@@ -27,32 +50,43 @@ const Navbar = () => {
           </button>
           <div
             className={`navbar-brand mx-auto d-lg-none ${
-              collapsed ? "logo-collapsed" : "logo-expanded"
+              collapsed
+                ? "logo-collapsed-responsive"
+                : "logo-expanded-responsive"
             }`}
           >
             <img
               src="/big_logo.png"
               alt="Morden Caterers"
-              className="navbar-logo"
+              className="navbar-logo-responsive"
             />
           </div>
           <div
-            className={`collapse navbar-collapse ${collapsed ? "" : "show"}`}
-            id="navbarNav"
+            className={`collapse navbar-collapse ${collapsed ? "" : "show"} ${
+              collapsed ? "" : "fullscreen-nav"
+            }`}
+            id="navbarNavResponsive"
           >
-            <ul className="navbar-nav me-auto">
+            <button className="close-btn d-lg-none" onClick={handleClose}>
+              &times;
+            </button>
+            <ul className="navbar-nav me-auto left-nav mob-align">
               <li className="nav-item">
-                <NavLink className="nav-link" to="/" end>
+                <NavLink className="nav-link" to="/" end onClick={handleClose}>
                   HOME
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink className="nav-link" to="/about">
+                <NavLink className="nav-link" to="/about" onClick={handleClose}>
                   ABOUT US
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink className="nav-link" to="/services">
+                <NavLink
+                  className="nav-link"
+                  to="/services"
+                  onClick={handleClose}
+                >
                   SERVICES
                 </NavLink>
               </li>
@@ -61,46 +95,30 @@ const Navbar = () => {
               <img
                 src="/big_logo.png"
                 alt="Morden Caterers"
-                className="navbar-logo"
+                className="navbar-logo-centered"
               />
             </div>
-            <ul className="navbar-nav ms-auto">
-              {/* <li className="nav-item dropdown">
-                <NavLink
-                  className="nav-link dropdown-toggle"
-                  to="/menu"
-                  id="navbarDropdown"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  MENU
-                </NavLink>
-                <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li>
-                    <NavLink className="dropdown-item" to="/menu1">
-                      Menu 1
-                    </NavLink>
-                  </li>
-                  <li>
-                    <NavLink className="dropdown-item" to="/menu2">
-                      Menu 2
-                    </NavLink>
-                  </li>
-                </ul>
-              </li> */}
+            <ul className="navbar-nav ms-auto right-nav mob-align">
               <li className="nav-item">
-                <NavLink className="nav-link" to="/menu">
+                <NavLink className="nav-link" to="/menu" onClick={handleClose}>
                   MENU
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink className="nav-link" to="/gallery">
+                <NavLink
+                  className="nav-link"
+                  to="/gallery"
+                  onClick={handleClose}
+                >
                   GALLERY
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink to="/contact" className="btn btn-primary">
+                <NavLink
+                  to="/contact"
+                  className="btn btn-primary"
+                  onClick={handleClose}
+                >
                   CONTACT US
                 </NavLink>
               </li>
