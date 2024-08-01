@@ -1,3 +1,8 @@
+.custom-arrow,
+.slider-image {
+  display: block
+}
+
 .center-text,
 .slide {
   text-align: center
@@ -14,22 +19,25 @@
   margin-bottom: 20px
 }
 
-.slider-image {
-  margin: auto;
-  display: block
+.slick-track {
+  background-color: #00148f;
+  padding: 40px 0 30px;
+  margin: 0 30px #00148f
 }
 
 .custom-arrow {
-  display: block;
-  background: #000;
   color: #fff;
-  border-radius: 50%;
   width: 30px;
   height: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
+  border-radius: 10px !important;
   z-index: 1
+}
+
+.custom-arrow::before {
+  font-size: 60px
 }
 
 .custom-arrow i {
@@ -74,4 +82,40 @@
 
 .features li {
   margin-bottom: 5px
+}
+
+.disc {
+  list-style-type: disc !important;
+  margin-left: 20px
+}
+
+.cust-font {
+  color: #00148f;
+  font-family: sedan;
+  font-size: 2rem !important;
+  margin-top: 20px
+}
+
+.cust-roboto {
+  font-family: Cabin Condensed !important;
+  font-size: 1rem !important
+}
+
+.features {
+  flex: 1
+}
+
+.details {
+  flex: 1.5
+}
+
+@media (max-width:767.98px) {
+  .bottom-section {
+    flex-direction: column
+  }
+
+  .details,
+  .features {
+    width: 100%
+  }
 }

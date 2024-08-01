@@ -29,17 +29,17 @@ const titles = [
 
 const subheading = [
   "Wedding Function Catering",
-  "Description for Venue Beautification",
-  "Description for Jaimala Theme & Entertainment",
-  "Description for Theme Parties",
-  "Description for Crockery Arrangements",
-  "Description for Corporate Events",
-  "Description for Birthday Function",
-  "Description for Accommodation for Guests",
+  "Venue Beautification Services",
+  "Jaimala Theme & Entertainment",
+  "Theme Party Organisation",
+  "Crockery Arrangements",
+  "Corporate Events",
+  "Birthday Celebration",
+  "Accommodation for Guests",
 ];
 
 const para = [
-  "A wedding is that special occasion which has great significance in the life of every Person. And especially in context of the Indian tradition, marriages are not only looked upon as a bond between two individuals, it is actually considered a bonding of two families and their future generations.",
+  "A wedding is that special occasion which has great significance in the life of every Person. And especially in context of the Indian tradition, marriages are not only looked upon as a bond between two individuals, it is actually considered a bonding of two families and their future generations. Attended by a large number of relatives and friends from both the girl's and the boy's side, Indian weddings are often undertaken in a grand manner, with every arrangement made to look larger than life. We at Red Chilli Caterers are indeed aware of this rising trend, and we constantly keep focusing on broadening our array of services to cater to a larger section of clients with our top-draw wedding catering services.",
   "Our venue beautification services transform any location into a breathtaking setting that perfectly aligns with the theme and vision of your event. From floral arrangements to lighting and decor, we ensure every detail is meticulously crafted to create an unforgettable atmosphere. Red Chilli Caterers takes pride in enhancing the aesthetic appeal of your venue, making it an enchanting backdrop for your special day.",
   "The Jaimala ceremony is a highlight of Indian weddings, symbolizing the first step of the couple's union. We offer a variety of themes and entertainment options to make this moment even more magical. Whether you prefer a traditional setup or a modern twist, our team ensures a memorable experience with stunning visuals and engaging performances, adding an extra touch of splendor to your celebration.",
   "Theme parties are an exciting way to celebrate any occasion, and we excel at bringing your chosen theme to life. From concept to execution, our team handles everything, ensuring a cohesive and immersive experience for your guests. With creative decor, themed catering, and tailored entertainment, Red Chilli Caterers guarantees a fun and unforgettable party that reflects your unique style.",
@@ -50,15 +50,66 @@ const para = [
 ];
 
 const features = [
-  "Arranging the Venue",
-  "Light & music arrangement",
-  "Venue Decoration",
-  "Food, Snacks & Beverage Catering",
-  "Music & Live DJ",
-  "Mehndi & Bridal make-up for the girl",
-  "Live Show by renowned artists",
-  "Lodging & Travel arrangements for guests",
-  "Honeymoon package for the new Couple",
+  [
+    "Arranging the Venue",
+    "Light & music arrangement",
+    "Venue Decoration",
+    "Food, Snacks & Beverage Catering",
+    "Music & Live DJ",
+    "Mehndi & Bridal make-up for the girl",
+    "Live Show by renowned artists",
+    "Lodging & Travel arrangements for guests",
+    "Honeymoon package for the new Couple",
+  ],
+  [
+    "Venue Cleaning & Preparation",
+    "Floral Arrangements",
+    "Lighting Design",
+    "Furniture Setup",
+    "Thematic Decor",
+  ],
+  [
+    "Jaimala Design & Customization",
+    "Entertainment Acts",
+    "Stage Setup",
+    "Costume Design for Performers",
+    "Audio & Visual Equipment",
+  ],
+  [
+    "Theme Conceptualization",
+    "Decorative Elements",
+    "Costume Coordination",
+    "Thematic Music & Activities",
+    "Guest Invitations & Management",
+  ],
+  [
+    "Selection of Crockery",
+    "Table Setting",
+    "Glassware & Cutlery Arrangement",
+    "Quality Check & Cleaning",
+    "Replacement & Maintenance",
+  ],
+  [
+    "Venue Selection & Booking",
+    "Event Planning & Coordination",
+    "Audiovisual Equipment Setup",
+    "Catering Services",
+    "Guest Management & Registration",
+  ],
+  [
+    "Party Theme Design",
+    "Cake & Dessert Arrangements",
+    "Entertainment & Games",
+    "Invitations & RSVPs",
+    "Gift Management",
+  ],
+  [
+    "Hotel Booking & Coordination",
+    "Transportation Arrangements",
+    "Room Assignments & Preferences",
+    "Welcome Packages",
+    "Check-in & Check-out Services",
+  ],
 ];
 
 export default function Services() {
@@ -111,16 +162,22 @@ export default function Services() {
       </Slider>
       <div className="bottom-section">
         <div className="features">
-          <h3>Other Features Included</h3>
-          <ul>
-            {features.map((feature, index) => (
-              <li key={index}>{feature}</li>
+          <h3 className="cust-font">Other Features Included</h3>
+          <ul className="disc">
+            {features[currentSlide].map((feature, index) => (
+              <li className="cust-roboto" key={index}>
+                {feature}
+              </li>
             ))}
           </ul>
         </div>
         <div className="details">
-          <h3>{subheading[currentSlide]}</h3>
-          <p>{para[currentSlide]}</p>
+          <h3 className="cust-font" style={{ textAlign: "center" }}>
+            {subheading[currentSlide]}
+          </h3>
+          <p className="cust-roboto" style={{ textAlign: "justify" }}>
+            {para[currentSlide]}
+          </p>
         </div>
       </div>
     </div>
