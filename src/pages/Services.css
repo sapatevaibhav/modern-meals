@@ -1,85 +1,77 @@
-.services-container {
-  padding: 20px;
-  font-family: "Roboto", sans-serif;
+.center-text,
+.slide {
+  text-align: center
 }
 
-.gallery-heading {
-  text-align: center;
-  font-size: 2rem;
-  margin-bottom: 10px;
+.services-container {
+  padding: 20px;
+  font-family: Roboto, sans-serif
 }
 
 .center-text {
-  text-align: center;
   font-size: 1.2rem;
-  font-weight: bold;
-  margin-bottom: 20px;
-}
-
-.slide {
-  text-align: center;
+  font-weight: 700;
+  margin-bottom: 20px
 }
 
 .slider-image {
-  width: 100%;
-  max-width: 600px;
   margin: auto;
-  display: block;
+  display: block
 }
 
 .custom-arrow {
   display: block;
-  background: black;
-  color: white;
+  background: #000;
+  color: #fff;
   border-radius: 50%;
   width: 30px;
   height: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 1;
+  z-index: 1
 }
 
 .custom-arrow i {
-  color: white;
+  color: #fff
 }
 
 .next-arrow {
-  right: 10px;
+  right: 10px
 }
 
 .prev-arrow {
-  left: 10px;
+  left: 10px
 }
 
 .bottom-section {
   display: flex;
   justify-content: space-between;
-  padding: 20px;
+  padding: 20px
 }
 
-.features,
-.details {
-  width: 45%;
+.details,
+.features {
+  width: 45%
 }
 
-.features h3,
-.details h3 {
+.details h3,
+.features h3 {
   font-size: 1.5rem;
-  font-weight: bold;
-  margin-bottom: 10px;
+  font-weight: 700;
+  margin-bottom: 10px
+}
+
+.details p,
+.features li {
+  font-size: 1rem
 }
 
 .features ul {
   list-style: none;
-  padding: 0;
+  padding: 0
 }
 
 .features li {
-  font-size: 1rem;
-  margin-bottom: 5px;
-}
-
-.details p {
-  font-size: 1rem;
+  margin-bottom: 5px
 }

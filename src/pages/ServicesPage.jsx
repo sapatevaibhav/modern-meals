@@ -1,5 +1,6 @@
 import React from "react";
 import ContactComponent from "../components/ContactComponent";
+import { Link } from "react-router-dom";
 import "./ServicesPage.css";
 
 export default function ServicesPage() {
@@ -29,7 +30,7 @@ export default function ServicesPage() {
         impressions, our commitment is to make every event a truly exceptional
         experience!
       </p>
-      <div className="services_container" style={{fontFamily:"sedan"}}>
+      <div className="services_container" style={{ fontFamily: "sedan" }}>
         <div className="service-cards-container">
           <div className="service-card">
             <img
@@ -39,9 +40,9 @@ export default function ServicesPage() {
             />
             <div className="service-text">
               <h3>Weddings Services</h3>
-              <a href="#" className="learn-more">
+              <Link to={`/all_services/${0}`} className="learn-more">
                 ← Learn More
-              </a>
+              </Link>
             </div>
           </div>
           <div className="service-card">
@@ -52,19 +53,19 @@ export default function ServicesPage() {
             />
             <div className="service-text ali-right">
               <h3>Venue Beautification</h3>
-              <a href="#" className="learn-more">
+              <Link to={`/all_services/${1}`} className="learn-more">
                 Learn More →
-              </a>
+              </Link>
             </div>
           </div>
-        </div>{" "}
+        </div>
         <div className="service-cards-container">
           <div className="service-card">
             <div className="service-text ali-right">
               <h3>Jaimala Theme & Entertainment</h3>
-              <a href="#" className="learn-more">
+              <Link to={`/all_services/${2}`} className="learn-more">
                 Learn More →
-              </a>
+              </Link>
             </div>
             <img
               src="/services/jaimala_theme.png"
@@ -75,17 +76,17 @@ export default function ServicesPage() {
           <div className="service-card">
             <div className="service-text">
               <h3>Theme Parties</h3>
-              <a href="#" className="learn-more">
+              <Link to={`/all_services/${3}`} className="learn-more">
                 ← Learn More
-              </a>
+              </Link>
             </div>
             <img
               src="/services/theme_parties.png"
               alt="Theme Parties"
               className="service-image"
             />
-          </div>{" "}
-        </div>{" "}
+          </div>
+        </div>
         <div className="service-cards-container">
           <div className="service-card">
             <img
@@ -95,9 +96,9 @@ export default function ServicesPage() {
             />
             <div className="service-text">
               <h3>Crockery Arrangements</h3>
-              <a href="#" className="learn-more">
+              <Link to={`/all_services/${4}`} className="learn-more">
                 Learn More ←
-              </a>
+              </Link>
             </div>
           </div>
           <div className="service-card">
@@ -108,19 +109,19 @@ export default function ServicesPage() {
             />
             <div className="service-text ali-right">
               <h3>Corporate Events</h3>
-              <a href="#" className="learn-more">
+              <Link to={`/all_services/${5}`} className="learn-more">
                 Learn More →
-              </a>
+              </Link>
             </div>
-          </div>{" "}
-        </div>{" "}
+          </div>
+        </div>
         <div className="service-cards-container">
           <div className="service-card">
             <div className="service-text ali-right">
               <h3>Birthday Function</h3>
-              <a href="#" className="learn-more">
+              <Link to={`/all_services/${6}`} className="learn-more">
                 Learn More →
-              </a>
+              </Link>
             </div>
             <img
               src="/services/birthday_function.png"
@@ -131,9 +132,9 @@ export default function ServicesPage() {
           <div className="service-card">
             <div className="service-text">
               <h3>Accommodation for Guests</h3>
-              <a href="#" className="learn-more">
+              <Link to={`/all_services/${7}`} className="learn-more">
                 ← Learn More
-              </a>
+              </Link>
             </div>
             <img
               src="/services/accomodation.png"

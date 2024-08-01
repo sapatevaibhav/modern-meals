@@ -1,5 +1,10 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  useParams,
+} from "react-router-dom";
 import Navbar from "./components/Navbar";
 import HomePage from "./pages/HomePage";
 import AboutUsPage from "./pages/AboutUsPage";
@@ -23,11 +28,16 @@ const App = () => {
         <Route path="/gallery" element={<GalleryPage />} />
         <Route path="/contact" element={<ContactUsPage />} />
         <Route path="/testimonials" element={<TestimonialsPage />} />
-        <Route path="/all_services" element={<Services />} />
+        <Route path="/all_services/:index" element={<ServiceWrapper />} />
       </Routes>
       <AboutUs />
     </Router>
   );
 };
+
+function ServiceWrapper() {
+  const { index } = useParams();
+  return <Services initialImageIndex={parseInt(index, 10)} />;
+}
 
 export default App;
