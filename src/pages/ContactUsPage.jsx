@@ -24,6 +24,7 @@ export default function ContactUsPage() {
     paddingRight: "10px",
     backgroundColor: "#00148f",
     color: "white",
+    WebkitTextFillColor: "white",
     tooltipColor: "white",
   };
   const position = [18.516726, 73.856255];
@@ -76,7 +77,7 @@ export default function ContactUsPage() {
                 ></i>
                 <input
                   type="tel"
-                  className="form-control"
+                  className="form-control wh-text"
                   placeholder="PHONE NUMBER"
                   required
                   style={inputStyle}
