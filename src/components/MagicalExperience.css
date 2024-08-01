@@ -19,7 +19,7 @@
 }
 
 .igc img {
-  height: 600px !important;
+  height: 520px !important;
   width: auto;
 }
 
@@ -65,7 +65,7 @@
   transform: translate(-1px);
   position: relative;
   left: -41px;
-  top: 275px;
+  top: 250px;
   transition: none;
 }
 
