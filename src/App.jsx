@@ -1,14 +1,15 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Navbar from './components/Navbar';
-import HomePage from './pages/HomePage';
-import AboutUsPage from './pages/AboutUsPage';
-import ServicesPage from './pages/ServicesPage';
-import MenuPage from './pages/MenuPage';
-import GalleryPage from './pages/GalleryPage';
-import ContactUsPage from './pages/ContactUsPage';
-import TestimonialsPage from './pages/TestimonialsPage';
-import AboutUs from './components/AboutUs';
+import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import HomePage from "./pages/HomePage";
+import AboutUsPage from "./pages/AboutUsPage";
+import ServicesPage from "./pages/ServicesPage";
+import MenuPage from "./pages/MenuPage";
+import GalleryPage from "./pages/GalleryPage";
+import ContactUsPage from "./pages/ContactUsPage";
+import TestimonialsPage from "./pages/TestimonialsPage";
+import Services from "./pages/Services";
+import AboutUs from "./components/AboutUs";
 
 const App = () => {
   return (
@@ -22,8 +23,9 @@ const App = () => {
         <Route path="/gallery" element={<GalleryPage />} />
         <Route path="/contact" element={<ContactUsPage />} />
         <Route path="/testimonials" element={<TestimonialsPage />} />
+        <Route path="/all_services" element={<Services />} />
       </Routes>
-      <AboutUs/>
+      <AboutUs />
     </Router>
   );
 };
