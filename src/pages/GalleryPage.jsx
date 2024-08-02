@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./GalleryPage.css";
+import Skeleton from "./Skeleton";
 
 const images = [
   "gellery/image1.png",
@@ -16,8 +17,20 @@ const images = [
   "gellery/image12.png",
 ];
 
+const skeletonHeights = [
+  "200px",
+  "400px",
+  "200px",
+  "400px",
+  "400px",
+  "200px",
+  "400px",
+  "200px",
+];
+
 export default function GalleryPage() {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [loading, setLoading] = useState(true);
   const ca_images = [
     "gellery/long_image1.png",
     "gellery/long_image1.png",
@@ -25,6 +38,13 @@ export default function GalleryPage() {
     "gellery/long_image1.png",
     "gellery/long_image1.png",
   ];
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+    return () => clearTimeout(timer);
+  }, []);
 
   const handleIndicatorClick = (index) => {
     setActiveIndex(index);
@@ -38,7 +58,9 @@ export default function GalleryPage() {
       >
         Gallery
       </p>
-      <h2 className="gallery-heading">Menu Make You Happy</h2>
+      <h2 className="custom-headings" style={{ textAlign: "center" }}>
+        Menu Make You Happy
+      </h2>
       <p
         className="center-text"
         style={{
@@ -52,60 +74,100 @@ export default function GalleryPage() {
       </p>
       <div className="container-fluid gallery-container">
         <div className="row mb-5">
-          <div className="col-md-3">
-            <div className="row">
-              <div className="col-12 mb-4">
-                <img src={images[0]} alt="Gallery" className="img-fluid" />
+          {loading ? (
+            <React.Fragment>
+              {skeletonHeights.slice(0, 4).map((height, index) => (
+                <div className="col-md-3 mb-4" key={index}>
+                  <Skeleton height={height} />
+                </div>
+              ))}
+            </React.Fragment>
+          ) : (
+            <React.Fragment>
+              <div className="col-md-3">
+                <div className="row">
+                  <div className="col-12 mb-4">
+                    <img src={images[0]} alt="Gallery" className="img-fluid" />
+                  </div>
+                  <div className="col-12 mb-4">
+                    <img src={images[1]} alt="Gallery" className="img-fluid" />
+                  </div>
+                </div>
               </div>
-              <div className="col-12 mb-4">
-                <img src={images[1]} alt="Gallery" className="img-fluid" />
+              <div className="col-md-3 mb-4">
+                <img
+                  src={images[2]}
+                  alt="Gallery"
+                  className="img-fluid h-100"
+                />
               </div>
-            </div>
-          </div>
-          <div className="col-md-3 mb-4">
-            <img src={images[2]} alt="Gallery" className="img-fluid h-100" />
-          </div>
-          <div className="col-md-3 ">
-            <div className="row">
-              <div className="col-12 mb-4">
-                <img src={images[3]} alt="Gallery" className="img-fluid" />
+              <div className="col-md-3">
+                <div className="row">
+                  <div className="col-12 mb-4">
+                    <img src={images[3]} alt="Gallery" className="img-fluid" />
+                  </div>
+                  <div className="col-12 mb-4">
+                    <img src={images[4]} alt="Gallery" className="img-fluid" />
+                  </div>
+                </div>
               </div>
-              <div className="col-12 mb-4">
-                <img src={images[4]} alt="Gallery" className="img-fluid" />
+              <div className="col-md-3 mb-4">
+                <img
+                  src={images[5]}
+                  alt="Gallery"
+                  className="img-fluid h-100"
+                />
               </div>
-            </div>
-          </div>
-          <div className="col-md-3 mb-4">
-            <img src={images[5]} alt="Gallery" className="img-fluid h-100" />
-          </div>
+            </React.Fragment>
+          )}
         </div>
         <div className="row mt-4">
-          <div className="col-md-3 mb-4">
-            <img src={images[6]} alt="Gallery" className="img-fluid h-100" />
-          </div>
-          <div className="col-md-3 mb-4">
-            <div className="row">
-              <div className="col-12 mb-4">
-                <img src={images[7]} alt="Gallery" className="img-fluid" />
+          {loading ? (
+            <React.Fragment>
+              {skeletonHeights.slice(4).map((height, index) => (
+                <div className="col-md-3 mb-4" key={index}>
+                  <Skeleton height={height} />
+                </div>
+              ))}
+            </React.Fragment>
+          ) : (
+            <React.Fragment>
+              <div className="col-md-3 mb-4">
+                <img
+                  src={images[6]}
+                  alt="Gallery"
+                  className="img-fluid h-100"
+                />
               </div>
-              <div className="col-12 ">
-                <img src={images[8]} alt="Gallery" className="img-fluid" />
+              <div className="col-md-3">
+                <div className="row">
+                  <div className="col-12 mb-4">
+                    <img src={images[7]} alt="Gallery" className="img-fluid" />
+                  </div>
+                  <div className="col-12">
+                    <img src={images[8]} alt="Gallery" className="img-fluid" />
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-          <div className="col-md-3 mb-4">
-            <img src={images[9]} alt="Gallery" className="img-fluid h-100" />
-          </div>
-          <div className="col-md-3 mb-4">
-            <div className="row">
-              <div className="col-12 mb-4">
-                <img src={images[10]} alt="Gallery" className="img-fluid" />
+              <div className="col-md-3 mb-4">
+                <img
+                  src={images[9]}
+                  alt="Gallery"
+                  className="img-fluid h-100"
+                />
               </div>
-              <div className="col-12">
-                <img src={images[11]} alt="Gallery" className="img-fluid" />
+              <div className="col-md-3">
+                <div className="row">
+                  <div className="col-12 mb-4">
+                    <img src={images[10]} alt="Gallery" className="img-fluid" />
+                  </div>
+                  <div className="col-12">
+                    <img src={images[11]} alt="Gallery" className="img-fluid" />
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
+            </React.Fragment>
+          )}
         </div>
       </div>
       <div
@@ -121,7 +183,11 @@ export default function GalleryPage() {
                 index === activeIndex ? "active" : ""
               }`}
             >
-              <img src={image} className="d-block w-100" alt={`Slide ${index + 1}`} />
+              <img
+                src={image}
+                className="d-block w-100"
+                alt={`Slide ${index + 1}`}
+              />
             </div>
           ))}
         </div>
@@ -133,11 +199,10 @@ export default function GalleryPage() {
               style={{
                 width: "12px",
                 height: "12px",
-                backgroundColor:
-                  activeIndex === index ? "darkblue" : "blue",
+                backgroundColor: activeIndex === index ? "darkblue" : "blue",
                 margin: "0 5px",
                 borderRadius: "50%",
-                cursor: "pointer"
+                cursor: "pointer",
               }}
             ></div>
           ))}
