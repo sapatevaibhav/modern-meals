@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-
+import styled from "styled-components";
 const testimonials = [
   {
     image: "happy_client.png",
@@ -26,7 +26,12 @@ const testimonials = [
     author: "Vidya & Anjali",
   },
 ];
-
+const TestimonialContainer = styled.div`
+  flex: 1;
+  @media (max-width: 675px) {
+    min-height: 350px;
+  }
+`;
 const Testimonials = () => {
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
 
@@ -51,12 +56,15 @@ const Testimonials = () => {
       }}
     >
       <div className="text-center">
-        <h1 style={{ fontFamily: "Tangerine", fontSize: "6em" }}>
+        <h1 className="custom-headings" style={{ color: "white" }}>
           Our Happy Clients
         </h1>
-        <p style={{ fontFamily: "Sedan", fontSize: "1.5em" }}>
-          Because we at Gala Caterers know you don't want to regret saying
-          <br /> <strong>'Oh! I could have eaten a bit more…'</strong>
+        <p style={{ fontFamily: "Sedan", fontSize: "1.35em" }}>
+          Because we at Modern Caterers know you don't want to regret saying
+          <br />{" "}
+          <strong style={{ fontSize: "1.4em" }}>
+            'Oh! I could have eaten a bit more…'
+          </strong>
         </p>
       </div>
       <div className="d-flex justify-content-center align-items-center flex-column flex-lg-row">
@@ -69,32 +77,35 @@ const Testimonials = () => {
             alt="testimonial"
             style={{
               borderRadius: "15px",
-              width: "100%",
+              width: "90%",
               padding: "20px 20px",
               height: "auto",
               maxWidth: "none",
             }}
           />
         </div>
-        <div className="mt-3 mt-lg-0 ml-lg-3" style={{ flex: 1 }}>
-          <p style={{ fontFamily: "Roboto", fontSize: "1.5em" }}>
-            {testimonials[currentTestimonial].text}
-          </p>
-          <p style={{ fontFamily: "Roboto", fontSize: "1.5em" }}>
+        <TestimonialContainer
+          className="mt-3 mt-lg-0 ml-lg-3 custom-para"
+          style={{ flex: 1 }}
+        >
+          <p>{testimonials[currentTestimonial].text}</p>
+          <p style={{ fontFamily: "Roboto", fontSize: "1.3em" }}>
             <b>{testimonials[currentTestimonial].author}</b>
           </p>
-        </div>
+        </TestimonialContainer>
       </div>
       <div className="d-flex justify-content-center mt-3">
         {testimonials.map((_, index) => (
           <div
             key={index}
+            onClick={() => setCurrentTestimonial(index)}
             style={{
               width: "70px",
               height: "5px",
               backgroundColor:
                 currentTestimonial === index ? "white" : "#3b5eb2",
               margin: "0 5px",
+              cursor: "pointer",
             }}
           ></div>
         ))}

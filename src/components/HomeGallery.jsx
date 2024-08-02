@@ -14,7 +14,7 @@ const GalleryContainer = styled.div`
   border-top-left-radius: 75px;
   border-top-right-radius: 75px;
   padding: 20px;
-  margin: 50px 50px;
+  margin: 50px 30px;
   text-align: center;
 `;
 
@@ -59,7 +59,7 @@ const ImageWrapper = styled.div`
   }
 
   @media (max-width: 600px) {
-    max-width: 300px;
+    max-width: 350px;
     margin-top: 20px !important;
   }
 `;

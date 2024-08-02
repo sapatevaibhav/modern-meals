@@ -26,8 +26,8 @@ const imaage = () => {
   return (
     <div className="imaage-container">
       <div className="text-container">
-        <h1 className="headline d-hline">Wedding Caterers in Pune</h1>
-        <p className="paragraph">
+        <h1 className=" custom-headings headline d-hline">Wedding Caterers in Pune</h1>
+        <p className="paragraph custom-para">
           In the context of this current social scenario in india, it is not
           surprising that the demand for top quality function organizers is
           witnessing an ever increasing trend at present. More and more families

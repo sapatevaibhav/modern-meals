@@ -48,7 +48,9 @@ const MagicalExperience = () => {
 
   return (
     <>
-      <h1 className="main-heading">Making Every Experience Magical</h1>
+      <h1 className="main-heading custom-headings">
+        Making Every Experience Magical
+      </h1>
       <div className="carousel-container">
         <div className="image-container igc">
           <img
@@ -71,7 +73,9 @@ const MagicalExperience = () => {
         </div>
         <div className="content-container">
           <h3 className="option-headline">{title}</h3>
-          <p className="description">{carouselItems[index].description}</p>
+          <p className="description custom-para">
+            {carouselItems[index].description}
+          </p>
           <Link to="/services">
             <button className="btn btn-primary">LEARN MORE</button>
           </Link>

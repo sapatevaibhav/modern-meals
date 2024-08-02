@@ -65,12 +65,14 @@
   transform: translate(-1px);
   position: relative;
   left: -41px;
-  top: 250px;
+  top: 200px;
   transition: none;
 }
-
+.description {
+  min-height: 175px;
+}
 .option-headline {
-  font-family: Roboto, cursive;
+  font-family: Roboto;
   color: #00148f;
   font-size: 36px;
 }
