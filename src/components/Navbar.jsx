@@ -55,11 +55,13 @@ const Navbar = () => {
                 : "logo-expanded-responsive"
             }`}
           >
-            <img
-              src="/big_logo.png"
-              alt="Morden Caterers"
-              className="navbar-logo-responsive"
-            />
+            <NavLink to="/">
+              <img
+                src="/big_logo.png"
+                alt="Morden Caterers"
+                className="navbar-logo-responsive"
+              />
+            </NavLink>
           </div>
           <div
             className={`collapse navbar-collapse ${collapsed ? "" : "show"} ${
@@ -92,11 +94,13 @@ const Navbar = () => {
               </li>
             </ul>
             <div className="navbar-brand mx-auto d-none d-lg-block">
-              <img
-                src="/big_logo.png"
-                alt="Morden Caterers"
-                className="navbar-logo-centered"
-              />
+              <NavLink to="/">
+                <img
+                  src="/big_logo.png"
+                  alt="Morden Caterers"
+                  className="navbar-logo-centered"
+                />
+              </NavLink>
             </div>
             <ul className="navbar-nav ms-auto right-nav mob-align">
               <li className="nav-item">
