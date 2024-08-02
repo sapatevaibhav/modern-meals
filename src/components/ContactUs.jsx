@@ -1,6 +1,38 @@
-import React from "react";
+import React, { useState } from "react";
 
 const GetInTouch = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    phone: "",
+    location: "",
+    email: "",
+    date: "",
+  });
+
+  const [submitted, setSubmitted] = useState(false);
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log("Form submitted:", formData);
+    setFormData({
+      name: "",
+      phone: "",
+      location: "",
+      email: "",
+      date: "",
+    });
+    setSubmitted(true);
+    setTimeout(() => setSubmitted(false), 3000);
+  };
+
   const inputStyle = {
     border: "none",
     borderBottom: "2px solid #000",
@@ -14,15 +46,16 @@ const GetInTouch = () => {
 
   return (
     <div className="container mt-5">
-      <h1
-        className="text-center mb-3 custom-headings"
-      >
-        Get In Touch
-      </h1>
+      <h1 className="text-center mb-3 custom-headings">Get In Touch</h1>
       <h5 className="text-center mb-5" style={{ fontFamily: "Sedan, serif" }}>
         Feel free to contact us !!
       </h5>
-      <form>
+      {submitted && (
+        <div className="alert alert-success text-center" role="alert">
+          Thank you! Your details have been submitted.
+        </div>
+      )}
+      <form onSubmit={handleSubmit}>
         <div className="row">
           <div className="col-md-6">
             <div className="mb-4 d-flex align-items-center">
@@ -34,6 +67,9 @@ const GetInTouch = () => {
                 type="text"
                 className="form-control"
                 placeholder="NAME"
+                name="name"
+                value={formData.name}
+                onChange={handleChange}
                 required
                 style={inputStyle}
               />
@@ -47,6 +83,9 @@ const GetInTouch = () => {
                 type="tel"
                 className="form-control"
                 placeholder="PHONE NUMBER"
+                name="phone"
+                value={formData.phone}
+                onChange={handleChange}
                 required
                 style={inputStyle}
               />
@@ -60,6 +99,9 @@ const GetInTouch = () => {
                 type="text"
                 className="form-control"
                 placeholder="LOCATION"
+                name="location"
+                value={formData.location}
+                onChange={handleChange}
                 style={inputStyle}
               />
             </div>
@@ -74,6 +116,9 @@ const GetInTouch = () => {
                 type="email"
                 className="form-control"
                 placeholder="EMAIL"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
                 required
                 style={inputStyle}
               />
@@ -83,7 +128,14 @@ const GetInTouch = () => {
                 className="bi bi-calendar"
                 style={{ fontSize: "2.5rem", marginRight: "10px" }}
               ></i>
-              <input type="date" className="form-control" style={inputStyle} />
+              <input
+                type="date"
+                className="form-control"
+                name="date"
+                value={formData.date}
+                onChange={handleChange}
+                style={inputStyle}
+              />
             </div>
           </div>
         </div>

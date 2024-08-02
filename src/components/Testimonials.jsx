@@ -56,7 +56,7 @@ const Testimonials = () => {
       }}
     >
       <div className="text-center">
-        <h1 className="custom-headings" style={{ color: "white" }}>
+        <h1 className="custom-headings" style={{ color: "white",marginBottom:"50px" }}>
           Our Happy Clients
         </h1>
         <p style={{ fontFamily: "Sedan", fontSize: "1.35em" }}>
@@ -77,7 +77,7 @@ const Testimonials = () => {
             alt="testimonial"
             style={{
               borderRadius: "15px",
-              width: "90%",
+              width: "80%",
               padding: "20px 20px",
               height: "auto",
               maxWidth: "none",
