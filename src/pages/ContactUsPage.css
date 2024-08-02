@@ -62,9 +62,30 @@
   padding-left: 50px
 }
 
-.leaf-container {
-  height: 500px;
-  max-width: 1160px;
-  margin-top: 30px;
-  margin-bottom: 30px
+.google-map-container {
+  width: 100%;
+  margin: auto;
+  min-width: 300px;
+  max-width: 1165px;
+}
+
+@media (max-width: 768px) {
+  .google-map-container {
+    min-width: 250px !important;
+    max-width: 100% !important;
+  }
+}
+
+@media (max-width: 1024px) {
+  .google-map-container {
+    min-width: 300px !important;
+    max-width: 100% !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  .google-map-container {
+    min-width: 300px !important;
+    max-width: 1165px !important;
+  }
 }
