@@ -54,7 +54,7 @@ export default function AboutUsPage() {
         <ImageLayout />
       </div>
       <div
-        className="container-fluid text-white p-5 dark-container mx-3"
+        className="container-fluid container-fluid-cus text-white p-5 dark-container mx-3"
         style={{ backgroundColor: "#00148f" }}
       >
         <div className="row cus-flex ">
