@@ -10,7 +10,9 @@ export default function MenuPage() {
       >
         Menu
       </p>
-      <h2 className="gallery-heading">Menu Make You Happy</h2>
+      <h2 className="custom-headings" style={{ textAlign: "center" }}>
+        Menu Make You Happy
+      </h2>
       <p
         className="center-text"
         style={{
