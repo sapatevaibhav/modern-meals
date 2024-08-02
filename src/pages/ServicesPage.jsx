@@ -12,12 +12,12 @@ export default function ServicesPage() {
       >
         Services
       </p>
-      <h2 className="gallery-heading">Ready to Make Memories?</h2>
+      <h2 className="custom-headings" style={{ textAlign: "center" }}>
+        Ready to Make Memories?
+      </h2>
       <p
-        className="center-text"
+        className="center-text cust-para"
         style={{
-          fontFamily: "roboto",
-          fontSize: "1.2rem",
           margin: "auto",
           marginBottom: "50px",
           maxWidth: "800px",
