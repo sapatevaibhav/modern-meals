@@ -1,20 +1,62 @@
-import React from "react";
+import React, { useEffect, useState, useCallback } from "react";
+import { GoogleMap, useJsApiLoader } from "@react-google-maps/api";
 import "./ContactUsPage.css";
-import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
-import "leaflet/dist/leaflet.css";
-import L from "leaflet";
 import ContactComponent from "../components/ContactComponent";
 
-delete L.Icon.Default.prototype._getIconUrl;
-L.Icon.Default.mergeOptions({
-  iconRetinaUrl:
-    "https://unpkg.com/leaflet@1.7.1/dist/images/marker-icon-2x.png",
-  iconUrl: "https://unpkg.com/leaflet@1.7.1/dist/images/marker-icon.png",
-  shadowUrl: "https://unpkg.com/leaflet@1.7.1/dist/images/marker-shadow.png",
-});
+const containerStyle = {
+  height: "500px",
+  width: "100%",
+};
+
+const center = {
+  lat: 18.516726,
+  lng: 73.856255,
+};
+
+function MapComponent() {
+  const [map, setMap] = useState(null);
+
+  const onLoad = useCallback((mapInstance) => {
+    setMap(mapInstance);
+  }, []);
+
+  useEffect(() => {
+    if (map && window.google && window.google.maps) {
+      const marker = new window.google.maps.Marker({
+        position: center,
+        map,
+      });
+
+      const infoWindow = new window.google.maps.InfoWindow({
+        content: "<div>A pretty CSS3 popup. <br /> Easily customizable.</div>",
+      });
+
+      marker.addListener("click", () => {
+        infoWindow.open(map, marker);
+      });
+    }
+  }, [map]);
+
+  return (
+    <GoogleMap
+      mapContainerStyle={containerStyle}
+      center={center}
+      zoom={15}
+      onLoad={onLoad}
+    />
+  );
+}
 
 export default function ContactUsPage() {
-  const position = [18.516726, 73.856255];
+  const { isLoaded, loadError } = useJsApiLoader({
+    googleMapsApiKey: import.meta.env.VITE_GOOGLE_MAPS_API_KEY,
+    id: "google-map-script",
+  });
+
+  if (loadError) {
+    return <div>Error loading maps</div>;
+  }
+
   return (
     <div className="contact-container">
       <div className="contact-header text-center">
@@ -22,22 +64,12 @@ export default function ContactUsPage() {
         <p className="contact-subtitle">Best of Dining Experience</p>
       </div>
       <ContactComponent />
-      <div className="container leaf-container">
-        <MapContainer
-          center={position}
-          zoom={15}
-          style={{ height: "500px", width: "100%" }}
-        >
-          <TileLayer
-            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-          />
-          <Marker position={position}>
-            <Popup>
-              A pretty CSS3 popup. <br /> Easily customizable.
-            </Popup>
-          </Marker>
-        </MapContainer>
+      <div className="container google-map-container my-5 " style={{margin:"auto",minWidth:"1165px"}}>
+        {isLoaded ? (
+          <MapComponent />
+        ) : (
+          <div style={{ height: "500px" }}>Loading map...</div>
+        )}
       </div>
     </div>
   );
