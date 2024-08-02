@@ -6,38 +6,11 @@
   margin-top: -100px
 }
 
-.contact-title {
-  font-family: Tangerine, cursive;
-  color: #00148f;
-  font-size: 5rem
-}
 
 .contact-subtitle {
   font-family: Sedan, serif;
   color: #000;
   font-size: 1.2em
-}
-
-.contact-image-container {
-  display: flex;
-  justify-content: center;
-  position: relative;
-  margin-top: 0
-}
-
-.contact-image {
-  border-radius: 15px;
-  width: 40%;
-  height: auto;
-  object-fit: cover;
-  position: relative;
-  top: 0
-}
-
-.contact-form-title {
-  font-family: Tangerine, cursive;
-  color: #fff;
-  font-size: 5rem
 }
 
 .contact-form-subtitle {

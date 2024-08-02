@@ -1,6 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
+import "./ContactComponent.css";
 
 export default function ContactComponent() {
+  const [formData, setFormData] = useState({
+    name: "",
+    phoneNumber: "",
+    location: "",
+    email: "",
+    date: "",
+  });
+
   const inputStyle = {
     border: "none",
     borderBottom: "2px solid #eeeeee",
@@ -13,12 +22,26 @@ export default function ContactComponent() {
     backgroundColor: "#00148f",
     color: "white",
     WebkitTextFillColor: "white",
-    tooltipColor: "white",
   };
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Add your validation logic here
+    if (formData.name && formData.phoneNumber && formData.email) {
+      // Submit the form
+      console.log("Form submitted:", formData);
+    } else {
+      alert("Please fill out all required fields.");
+    }
+  };
+
   return (
     <div>
-      {" "}
-      <div className="contact-image-container ">
+      <div className="contact-image-container">
         <img
           src="happy_client.png"
           alt="Contact Us"
@@ -26,11 +49,11 @@ export default function ContactComponent() {
         />
       </div>
       <div className="container contact-header text-center contact-cont">
-        <h1 className="contact-title abcd mt-5">Get In Touch</h1>
+        <h1 className="custom-headings abcd mt-5" style={{color:"white"}}>Get In Touch</h1>
         <p className="contact-subtitle abcd">Feel free to contact us !!</p>
       </div>
       <div className="container my-0 contact-cont cpmtact-us">
-        <form>
+        <form onSubmit={handleSubmit}>
           <div className="row">
             <div className="col-md-6">
               <div className="mb-4 d-flex align-items-center">
@@ -44,10 +67,13 @@ export default function ContactComponent() {
                 ></i>
                 <input
                   type="text"
+                  name="name"
                   className="form-control"
                   placeholder="NAME"
                   required
                   style={inputStyle}
+                  value={formData.name}
+                  onChange={handleChange}
                 />
               </div>
               <div className="mb-4 d-flex align-items-center">
@@ -61,10 +87,13 @@ export default function ContactComponent() {
                 ></i>
                 <input
                   type="tel"
+                  name="phoneNumber"
                   className="form-control wh-text"
                   placeholder="PHONE NUMBER"
                   required
                   style={inputStyle}
+                  value={formData.phoneNumber}
+                  onChange={handleChange}
                 />
               </div>
               <div className="mb-4 d-flex align-items-center">
@@ -78,9 +107,12 @@ export default function ContactComponent() {
                 ></i>
                 <input
                   type="text"
+                  name="location"
                   className="form-control"
                   placeholder="LOCATION"
                   style={inputStyle}
+                  value={formData.location}
+                  onChange={handleChange}
                 />
               </div>
             </div>
@@ -96,10 +128,13 @@ export default function ContactComponent() {
                 ></i>
                 <input
                   type="email"
+                  name="email"
                   className="form-control"
                   placeholder="EMAIL"
                   required
                   style={inputStyle}
+                  value={formData.email}
+                  onChange={handleChange}
                 />
               </div>
               <div className="mb-4 d-flex align-items-center">
@@ -113,8 +148,11 @@ export default function ContactComponent() {
                 ></i>
                 <input
                   type="date"
+                  name="date"
                   className="form-control"
                   style={inputStyle}
+                  value={formData.date}
+                  onChange={handleChange}
                 />
               </div>
             </div>

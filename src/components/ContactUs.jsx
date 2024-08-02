@@ -15,12 +15,7 @@ const GetInTouch = () => {
   return (
     <div className="container mt-5">
       <h1
-        className="text-center mb-3"
-        style={{
-          fontFamily: "Tangerine, cursive",
-          color: "#00148f",
-          fontSize: "5em",
-        }}
+        className="text-center mb-3 custom-headings"
       >
         Get In Touch
       </h1>

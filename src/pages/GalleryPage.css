@@ -1,11 +1,4 @@
-.gallery-heading {
-  font-family: Tangerine, cursive;
-  color: #00148f;
-  font-size: 5rem;
-  text-align: center;
-}
-
-.container-fluid {
+.container-fluid-gal {
   padding-left: 40px;
   padding-right: 40px;
 }

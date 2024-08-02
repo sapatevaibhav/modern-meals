@@ -151,7 +151,9 @@ export default function Services() {
 
   return (
     <div className="services-container">
-      <h2 className="gallery-heading">{titles[currentSlide]}</h2>
+      <h2 className="custom-headings" style={{ textAlign: "center" }}>
+        {titles[currentSlide]}
+      </h2>
       <p className="center-text">FRESH AND HEALTHY FOOD AVAILABLE</p>
       <Slider ref={(slider) => (sliderRef = slider)} {...settings}>
         {images.map((src, index) => (

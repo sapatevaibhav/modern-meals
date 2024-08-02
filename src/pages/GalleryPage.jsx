@@ -72,7 +72,7 @@ export default function GalleryPage() {
       >
         Some Food with lots of Love
       </p>
-      <div className="container-fluid gallery-container">
+      <div className="container-fluid container-fluid-cus gallery-container">
         <div className="row mb-5">
           {loading ? (
             <React.Fragment>

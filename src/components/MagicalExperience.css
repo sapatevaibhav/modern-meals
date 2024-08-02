@@ -58,8 +58,6 @@
 }
 
 .main-heading {
-  font-family: Tangerine, cursive;
-  font-size: 6em;
   padding-left: 50%;
   width: 1367px;
   transform: translate(-1px);
@@ -68,9 +66,11 @@
   top: 200px;
   transition: none;
 }
+
 .description {
   min-height: 175px;
 }
+
 .option-headline {
   font-family: Roboto;
   color: #00148f;

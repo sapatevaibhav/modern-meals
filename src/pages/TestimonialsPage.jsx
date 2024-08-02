@@ -43,7 +43,7 @@ const testimonials_info = [
 const TestimonialsPage = () => {
   return (
     <div className="testimonials">
-      <h1 className="testimonials-heading">Testimonials</h1>
+      <h1 className="custom-headings">Testimonials</h1>
       <p className="testimonials-subheading">What People Think About Us??</p>
       <div className="testimonials-container">
         {testimonials_info.map((testimonial_info, index) => (

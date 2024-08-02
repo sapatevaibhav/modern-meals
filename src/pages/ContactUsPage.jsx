@@ -60,7 +60,7 @@ export default function ContactUsPage() {
   return (
     <div className="contact-container">
       <div className="contact-header text-center">
-        <h1 className="contact-title">Contact Us</h1>
+        <h1 className="custom-headings" style={{marginTop:"20px"}}>Contact Us</h1>
         <p className="contact-subtitle">Best of Dining Experience</p>
       </div>
       <ContactComponent />
