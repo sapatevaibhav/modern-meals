@@ -108,10 +108,16 @@ const GetInTouch = () => {
           </div>
           <div className="col-md-6">
             <div className="mb-4 d-flex align-items-center">
-              <i
-                className="bi bi-envelope"
-                style={{ fontSize: "2.5rem", marginRight: "10px" }}
-              ></i>
+              <img
+                src="/icons/email-black.png"
+                alt="email"
+                style={{
+                  width: "2.7rem",
+                  height: "2.7rem",
+                  marginRight: "10px",
+                  color: "white",
+                }}
+              />
               <input
                 type="email"
                 className="form-control"
@@ -124,10 +130,16 @@ const GetInTouch = () => {
               />
             </div>
             <div className="mb-4 d-flex align-items-center">
-              <i
-                className="bi bi-calendar"
-                style={{ fontSize: "2.5rem", marginRight: "10px" }}
-              ></i>
+              <img
+                src="/icons/calendar.png"
+                alt="calendar"
+                style={{
+                  width: "2.7rem",
+                  height: "2.7rem",
+                  marginRight: "10px",
+                  color: "white",
+                }}
+              />
               <input
                 type="date"
                 className="form-control"

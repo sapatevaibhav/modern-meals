@@ -30,9 +30,7 @@ export default function ContactComponent() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Add your validation logic here
     if (formData.name && formData.phoneNumber && formData.email) {
-      // Submit the form
       console.log("Form submitted:", formData);
     } else {
       alert("Please fill out all required fields.");
@@ -49,7 +47,9 @@ export default function ContactComponent() {
         />
       </div>
       <div className="container contact-header text-center contact-cont">
-        <h1 className="custom-headings abcd mt-5" style={{color:"white"}}>Get In Touch</h1>
+        <h1 className="custom-headings abcd mt-5" style={{ color: "white" }}>
+          Get In Touch
+        </h1>
         <p className="contact-subtitle abcd">Feel free to contact us !!</p>
       </div>
       <div className="container my-0 contact-cont cpmtact-us">
@@ -118,14 +118,16 @@ export default function ContactComponent() {
             </div>
             <div className="col-md-6">
               <div className="mb-4 d-flex align-items-center">
-                <i
-                  className="bi bi-envelope"
+                <img
+                  src="/icons/email.png"
+                  alt="email"
                   style={{
-                    fontSize: "2.5rem",
+                    width: "2.7rem",
+                    height: "2.7rem",
                     marginRight: "10px",
                     color: "white",
                   }}
-                ></i>
+                />
                 <input
                   type="email"
                   name="email"
@@ -138,14 +140,16 @@ export default function ContactComponent() {
                 />
               </div>
               <div className="mb-4 d-flex align-items-center">
-                <i
-                  className="bi bi-calendar"
+                <img
+                  src="/icons/cal.png"
+                  alt="calendar"
                   style={{
-                    fontSize: "2.5rem",
+                    width: "2.7rem",
+                    height: "2.7rem",
                     marginRight: "10px",
                     color: "white",
                   }}
-                ></i>
+                />
                 <input
                   type="date"
                   name="date"
