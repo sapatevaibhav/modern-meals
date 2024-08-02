@@ -1,6 +1,6 @@
 import React from "react";
 import ContactComponent from "../components/ContactComponent";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import "./ServicesPage.css";
 
 export default function ServicesPage() {
@@ -33,11 +33,13 @@ export default function ServicesPage() {
       <div className="services_container" style={{ fontFamily: "sedan" }}>
         <div className="service-cards-container">
           <div className="service-card">
-            <img
-              src="/services/wedding_services.png"
-              alt="Wedding Services"
-              className="service-image"
-            />
+            <NavLink to={`/all_services/${0}`}>
+              <img
+                src="/services/wedding_services.png"
+                alt="Wedding Services"
+                className="service-image"
+              />
+            </NavLink>
             <div className="service-text">
               <h3>Weddings Services</h3>
               <Link to={`/all_services/${0}`} className="learn-more">
@@ -46,11 +48,13 @@ export default function ServicesPage() {
             </div>
           </div>
           <div className="service-card">
-            <img
-              src="/services/venue_beautification.png"
-              alt="Venue Beautification"
-              className="service-image"
-            />
+            <NavLink to={`/all_services/${0}`}>
+              <img
+                src="/services/venue_beautification.png"
+                alt="Venue Beautification"
+                className="service-image"
+              />
+            </NavLink>
             <div className="service-text ali-right">
               <h3>Venue Beautification</h3>
               <Link to={`/all_services/${1}`} className="learn-more">
@@ -67,11 +71,13 @@ export default function ServicesPage() {
                 Learn More →
               </Link>
             </div>
-            <img
-              src="/services/jaimala_theme.png"
-              alt="Jaimala Theme & Entertainment"
-              className="service-image"
-            />
+            <NavLink to={`/all_services/${0}`}>
+              <img
+                src="/services/jaimala_theme.png"
+                alt="Jaimala Theme & Entertainment"
+                className="service-image"
+              />
+            </NavLink>
           </div>
           <div className="service-card">
             <div className="service-text">
@@ -80,20 +86,24 @@ export default function ServicesPage() {
                 ← Learn More
               </Link>
             </div>
-            <img
-              src="/services/theme_parties.png"
-              alt="Theme Parties"
-              className="service-image"
-            />
+            <NavLink to={`/all_services/${0}`}>
+              <img
+                src="/services/theme_parties.png"
+                alt="Theme Parties"
+                className="service-image"
+              />
+            </NavLink>
           </div>
         </div>
         <div className="service-cards-container">
           <div className="service-card">
-            <img
-              src="/services/crockery_arrangements.png"
-              alt="Crockery Arrangements"
-              className="service-image"
-            />
+            <NavLink to={`/all_services/${0}`}>
+              <img
+                src="/services/crockery_arrangements.png"
+                alt="Crockery Arrangements"
+                className="service-image"
+              />
+            </NavLink>
             <div className="service-text">
               <h3>Crockery Arrangements</h3>
               <Link to={`/all_services/${4}`} className="learn-more">
@@ -102,11 +112,13 @@ export default function ServicesPage() {
             </div>
           </div>
           <div className="service-card">
-            <img
-              src="/services/corporate_events.png"
-              alt="Corporate Events"
-              className="service-image"
-            />
+            <NavLink to={`/all_services/${0}`}>
+              <img
+                src="/services/corporate_events.png"
+                alt="Corporate Events"
+                className="service-image"
+              />
+            </NavLink>
             <div className="service-text ali-right">
               <h3>Corporate Events</h3>
               <Link to={`/all_services/${5}`} className="learn-more">
@@ -123,11 +135,13 @@ export default function ServicesPage() {
                 Learn More →
               </Link>
             </div>
-            <img
-              src="/services/birthday_function.png"
-              alt="Birthday Function"
-              className="service-image"
-            />
+            <NavLink to={`/all_services/${0}`}>
+              <img
+                src="/services/birthday_function.png"
+                alt="Birthday Function"
+                className="service-image"
+              />
+            </NavLink>
           </div>
           <div className="service-card">
             <div className="service-text">
@@ -136,11 +150,13 @@ export default function ServicesPage() {
                 ← Learn More
               </Link>
             </div>
-            <img
-              src="/services/accomodation.png"
-              alt="Accommodation for Guests"
-              className="service-image"
-            />
+            <NavLink to={`/all_services/${0}`}>
+              <img
+                src="/services/accomodation.png"
+                alt="Accommodation for Guests"
+                className="service-image"
+              />
+            </NavLink>
           </div>
         </div>
       </div>
