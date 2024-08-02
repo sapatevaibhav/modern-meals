@@ -4,6 +4,11 @@
   text-align: center
 }
 
+.container-fluid {
+  margin: 0 20px 50px !important;
+  max-width: 97% !important
+}
+
 .about-us-page {
   font-family: sedan, sans-serif;
   color: #000;
@@ -18,17 +23,8 @@
   margin-bottom: 40px
 }
 
-.des-text {
-  font-family: roboto, sans-serif;
-  font-size: 1.2em;
-  line-height: 1.6
-}
-
 .our-vision h2,
 .who-we-are h2 {
-  font-size: 5rem;
-  font-family: Tangerine, cursive;
-  color: #00148f;
   text-align: center;
   margin-bottom: 20px
 }
@@ -57,16 +53,9 @@
   width: 50%
 }
 
-.mission-text h4 {
-  font-size: 1.5em;
+.mission-text h5 {
   font-family: sedan, cursive;
   color: #333
-}
-
-.mission-text h2 {
-  font-size: 5rem;
-  color: #00148f;
-  font-family: Tangerine, cursive
 }
 
 .mission-text p {
@@ -95,6 +84,11 @@
     width: 100%;
     margin-top: 20px
   }
+
+  .container-fluid {
+    margin: 0 20px !important;
+    max-width: 94% !important
+  }
 }
 
 .sedanand {
@@ -104,7 +98,16 @@
 }
 
 .roboto {
-  font-family: Roboto, sans-serif;
-  font-size: 1rem;
   text-align: justify
+}
+
+@media (min-width:1725px) {
+  .cus-flex {
+    display: flex;
+    flex-direction: column !important;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin: auto
+  }
 }
