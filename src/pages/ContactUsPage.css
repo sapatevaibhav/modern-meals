@@ -36,29 +36,40 @@
 }
 
 .google-map-container {
+  position: relative;
+  width: calc(100% - 20px);
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  margin: 0 10px;
+}
+
+.google-map-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  margin: auto;
-  min-width: 300px;
-  max-width: 1165px;
+  height: 100%;
+  border: 0;
 }
 
 @media (max-width: 768px) {
   .google-map-container {
     min-width: 250px !important;
-    max-width: 100% !important;
+    max-width: calc(100% - 20px) !important;
   }
 }
 
 @media (max-width: 1024px) {
   .google-map-container {
     min-width: 300px !important;
-    max-width: 100% !important;
+    max-width: calc(100% - 20px) !important;
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1024px) {
   .google-map-container {
     min-width: 300px !important;
-    max-width: 1165px !important;
+    margin: auto;
   }
 }
