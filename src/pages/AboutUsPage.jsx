@@ -25,7 +25,7 @@ export default function AboutUsPage() {
             re-unions, wedding anniversaries, kitty parties, engagements,
             mehndi, New year parties, family outings, seminars, conferences,
             annual sales meets, company functions, or any other type of function
-            that any of our client may think of hosting, we at Red Chilli
+            that any of our client may think of hosting, we at Modern
             Caterers can easily manage all aspects of these functions from their
             beginning till the very end.
           </p>
@@ -61,7 +61,7 @@ export default function AboutUsPage() {
           <div className="col-md-4">
             <h2 className="sedanand">The freedom of choosing the best</h2>
             <p className="roboto custom-para">
-              When you select Red Chilli Caterers to organize your special
+              When you select Modern Caterers to organize your special
               functions, you can be sure of laying your hands on the best
               available resources for the evening. The best of food, the best of
               services, the best of decoration, the best of attention to every
@@ -72,7 +72,7 @@ export default function AboutUsPage() {
           <div className="col-md-4">
             <h2 className="sedanand">Assurance of the finest quality</h2>
             <p className="roboto custom-para">
-              If we dare to call ourselves Red Chilli Caterers, we also strive
+              If we dare to call ourselves Modern Caterers, we also strive
               to make sure that all our clients are treated like royalty, and
               they get that imperial taste in all aspects of our catering
               services. We are able to achieve such high standards by strictly
@@ -83,7 +83,7 @@ export default function AboutUsPage() {
           <div className="col-md-4">
             <h2 className="sedanand">Utmost consideration to finer points</h2>
             <p className="roboto custom-para">
-              We at Red Chilli Caterers always believe in doing as our client
+              We at Modern Caterers always believe in doing as our client
               would ask us to do. We always take a larger perspective of things
               while implementing the list of things to be done during a
               function. But this doesn't mean that we miss the smaller details
