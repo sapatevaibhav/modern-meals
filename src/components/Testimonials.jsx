@@ -56,7 +56,7 @@ const Testimonials = () => {
       }}
     >
       <div className="text-center">
-        <h1 className="custom-headings" style={{ color: "white",marginBottom:"50px" }}>
+        <h1 className="custom-headings" style={{ color: "white", marginBottom: "50px" }}>
           Our Happy Clients
         </h1>
         <p style={{ fontFamily: "Sedan", fontSize: "1.35em" }}>
@@ -88,7 +88,7 @@ const Testimonials = () => {
           className="mt-3 mt-lg-0 ml-lg-3 custom-para"
           style={{ flex: 1 }}
         >
-          <p>{testimonials[currentTestimonial].text}</p>
+          <p style={{ textAlign: "justify" }}>{testimonials[currentTestimonial].text}</p>
           <p style={{ fontFamily: "Roboto", fontSize: "1.3em" }}>
             <b>{testimonials[currentTestimonial].author}</b>
           </p>

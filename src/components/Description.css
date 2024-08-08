@@ -14,6 +14,10 @@
   text-align: center
 }
 
+.text-container .paragraph {
+  text-align: justify
+}
+
 .image-container {
   max-width: 100%
 }

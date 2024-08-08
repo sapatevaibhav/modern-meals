@@ -5,7 +5,7 @@ import "./AboutUs.css";
 const AboutUs = () => {
   return (
     <div className="about-us">
-      <img src="/logo.png" alt="Modern Meals Logo" className="logo" />
+      <img src="/big_logo.png" alt="Modern Meals Logo" className="logo" />
       <div className="content">
         <div className="about">
           <h3>About Us</h3>
