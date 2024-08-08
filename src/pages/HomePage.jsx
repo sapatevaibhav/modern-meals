@@ -5,6 +5,7 @@ import Gallery from "../components/HomeGallery";
 import MagicalExperience from "../components/MagicalExperience";
 import Testimonials from "../components/Testimonials";
 import GetInTouch from "../components/ContactUs";
+import OurMenu from "../components/OurMenu";
 
 export default function HomePage() {
   return (
@@ -12,6 +13,7 @@ export default function HomePage() {
       <CateringBanner />
       <Carousel />
       <MagicalExperience />
+      <OurMenu />
       <Gallery />
       <Testimonials />
       <GetInTouch />

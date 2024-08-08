@@ -1,0 +1,11 @@
+@media (max-width: 576px) {
+  .menu-container {
+    width: 95%;
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+
+  .menu-container div {
+    width: 99%;
+  }
+}
