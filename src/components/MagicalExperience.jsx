@@ -44,46 +44,54 @@ const ServiceCard = ({ imageSrc, title, subtitle, description, index }) => {
 
 const MagicalExperience = () => {
   return (
-    <div className="container">
+    <>
       <h1
         className="main-heading custom-headings mt-5"
         style={{ textAlign: "center" }}
       >
         Making Every Experience <br /> Magical
-      </h1>
-      <div className="row">
-        <ServiceCard
-          imageSrc="magical/weddings.png"
-          title="Weddings"
-          subtitle="EXCEPTIONAL WEDDINGS"
-          description="And when it comes down to choosing the most professionally managed Wedding Caterers organizers, there are not many who can stand in the same league as Modern Caterers. Modern Caterers enjoy the rare distinction of being an all-in-one organizer for all types of functions that our clients could think of hosting."
-          index={0}
-        />
-        <ServiceCard
-          imageSrc="magical/social.png"
-          title="Social"
-          subtitle="SOCIAL EVENTS"
-          description="When it comes to choosing the most professionally managed caterers for social events, few can match the caliber of Modern Caterers. Modern Caterers hold the unique distinction of being an all-in-one organizer for any type of social gathering our clients could envision hosting."
-          index={3}
-        />
-      </div>
-      <div className="row">
-        <ServiceCard
-          imageSrc="magical/corporate.png"
-          title="Corporate"
-          subtitle="CORPORATE EVENTS"
-          description="In the realm of corporate events, selecting the most professionally managed catering services is crucial, and Modern Caterers stand out in this regard. Modern Caterers boast the rare distinction of being a comprehensive organizer for all types of corporate functions that our clients may need to host."
-          index={5}
-        />
-        <ServiceCard
-          imageSrc="magical/birthday.png"
-          title="Birthday"
-          subtitle="BIRTHDAY PARTIES"
-          description="For professionally managed birthday party catering, Modern Caterers are second to none. Modern Caterers enjoy the unique distinction of being a one-stop organizer for all types of birthday celebrations that our clients wish to host."
-          index={6}
-        />
-      </div>
-    </div>
+      </h1> <div
+        className="container"
+        style={{
+          backgroundImage: "url('fork.png')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          padding: "20px",
+        }}
+      >
+        <div className="row">
+          <ServiceCard
+            imageSrc="magical/weddings.png"
+            title="Weddings"
+            subtitle="EXCEPTIONAL WEDDINGS"
+            description="And when it comes down to choosing the most professionally managed Wedding Caterers organizers, there are not many who can stand in the same league as Modern Caterers. Modern Caterers enjoy the rare distinction of being an all-in-one organizer for all types of functions that our clients could think of hosting."
+            index={0}
+          />
+          <ServiceCard
+            imageSrc="magical/social.png"
+            title="Social"
+            subtitle="SOCIAL EVENTS"
+            description="When it comes to choosing the most professionally managed caterers for social events, few can match the caliber of Modern Caterers. Modern Caterers hold the unique distinction of being an all-in-one organizer for any type of social gathering our clients could envision hosting."
+            index={3}
+          />
+        </div>
+        <div className="row">
+          <ServiceCard
+            imageSrc="magical/corporate.png"
+            title="Corporate"
+            subtitle="CORPORATE EVENTS"
+            description="In the realm of corporate events, selecting the most professionally managed catering services is crucial, and Modern Caterers stand out in this regard. Modern Caterers boast the rare distinction of being a comprehensive organizer for all types of corporate functions that our clients may need to host."
+            index={5}
+          />
+          <ServiceCard
+            imageSrc="magical/birthday.png"
+            title="Birthday"
+            subtitle="BIRTHDAY PARTIES"
+            description="For professionally managed birthday party catering, Modern Caterers are second to none. Modern Caterers enjoy the unique distinction of being a one-stop organizer for all types of birthday celebrations that our clients wish to host."
+            index={6}
+          />
+        </div>
+      </div></>
   );
 };
 
