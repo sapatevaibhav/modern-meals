@@ -38,7 +38,7 @@ body {
   height: 70px;
 }
 
-@media (max-width: 850px) {
+@media (max-width: 990px) {
   .navbar-brand.d-lg-none {
     display: flex !important;
   }
@@ -51,11 +51,11 @@ body {
   }
 }
 
-@media (min-width: 850px) {
+/* @media (min-width: 850px) {
   .navbar-brand.d-lg-block {
     display: none;
   }
-}
+} */
 
 .fullscreen-nav {
   position: fixed;

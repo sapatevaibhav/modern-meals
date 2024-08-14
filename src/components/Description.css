@@ -1,3 +1,8 @@
+.d-hline,
+.imaage-image {
+  margin: 80px 0 0
+}
+
 .imaage-container {
   display: flex;
   flex-direction: column;
@@ -22,12 +27,7 @@
   max-width: 100%
 }
 
-.d-hline {
-  margin: 80px 0 0;
-}
-
 .imaage-image {
-  margin: 80px 0 0;
   transition: opacity 1s ease-in-out;
   opacity: 0
 }
@@ -70,17 +70,19 @@
   }
 }
 
-@media (min-width:768px) {
+@media (min-width:900px) {
   .imaage-container {
     flex-direction: row
   }
+}
 
+@media (min-width:768px) {
   .d-hline {
     font-size: 6em
   }
 
   .text-container {
-    max-width: 50%;
+    max-width: 70%;
     padding-right: 20px
   }
 
