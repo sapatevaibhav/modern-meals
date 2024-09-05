@@ -10,32 +10,22 @@ export default function AboutUsPage() {
           <p className="center-text">About us</p>
           <h2 className="custom-headings">Who We Are</h2>
           <p className="des-text custom-para">
-            In the context of this current social scenario in India, it is not
-            surprising that the demand for top quality function organizers is
-            witnessing an ever increasing trend at present. More and more
-            families are opting for professionals to take care of their special
-            functions. And when it comes down to choosing the most
-            professionally managed wedding organizers, there are not many who
-            can stand in the same league as Modern Caterers.
+            At Modern Meal Caterers, we are passionate about creating extraordinary culinary experiences that make every event unforgettable. Based in Pune, we have earned a reputation for excellence in the catering industry by combining fresh, high-quality ingredients with innovative recipes and elegant presentations. Our team of experienced chefs, event planners, and service staff work tirelessly to ensure that every detail of your event is handled with the utmost care and professionalism.
           </p>
           <p className="des-text custom-para">
-            Modern Caterers enjoy the rare distinction of being an all in one
-            organizer for all types of functions that our clients could think of
-            hosting. Be it Birthdays, weddings, get-togethers, old friends
-            re-unions, wedding anniversaries, kitty parties, engagements,
-            mehndi, New year parties, family outings, seminars, conferences,
-            annual sales meets, company functions, or any other type of function
-            that any of our client may think of hosting, we at Modern
-            Caterers can easily manage all aspects of these functions from their
-            beginning till the very end.
+            Whether you’re planning a corporate event, a lavish wedding, or an intimate gathering, we bring the same level of dedication and creativity to every occasion. We believe that food is more than just a meal; it’s an experience that should delight the senses and bring people together. From the initial consultation to the final course, we are committed to making your vision a reality, delivering not just food, but memories that will last a lifetime.
           </p>
         </section>
         <section className="our-vision">
           <p className="center-text">Our Vision</p>
           <h2 className="custom-headings">To Create & Inspire</h2>
+          <p className="des-text custom-para">
+            To become the leading catering service in Pune, known for transforming every event into a memorable experience through innovative cuisine, exceptional service, and a commitment to quality. We envision a future where Modern Meal Caterers is synonymous with excellence, creativity, and unparalleled customer satisfaction, setting the standard for culinary artistry in the catering industry.
+          </p>
         </section>
         <section className="team-photo">
-          <div className="photo-placeholder">team photo</div>
+          {/* <div className="photo-placeholder">team photo</div> */}
+          <img src="team.png" alt="" srcset="" />
         </section>
       </div>
       <div className="container mission-container">
@@ -43,11 +33,7 @@ export default function AboutUsPage() {
           <h5 className="text-uppercase">Our Mission</h5>
           <h2 className="custom-headings">Creating Remarkable Experiences!</h2>
           <p className="custom-para">
-            Our specialty is providing peace of mind. With our experienced and
-            dedicated team, we handle all the nuances of off-site catering, so
-            you can enjoy your own event as a guest. From first impressions to
-            lasting impressions, our commitment is to make every event a truly
-            exceptional experience!
+            Our mission is to craft unforgettable dining experiences that delight the senses and bring people together. We are dedicated to using the finest ingredients, offering personalized service, and continuously innovating our menus to meet and exceed our clients’ expectations. At Modern Meal Caterers, we strive to make every event, whether large or small, a reflection of our passion for excellence and our commitment to creating lasting memories.
           </p>
           <button className="btn btn-primary">Know More</button>
         </div>

@@ -28,7 +28,7 @@ const ServiceCard = ({ imageSrc, title, subtitle, description, index }) => {
         >
           {subtitle}
         </h3>
-        <p className="custom-para" style={{ minHeight: "175px" }}>{description}</p>
+        <p className="custom-para" style={{ minHeight: "275px" }}>{description}</p>
         <NavLink to={`/all_services/${index}`}>
           <button
             className="btn btn-primary"
@@ -64,14 +64,15 @@ const MagicalExperience = () => {
             imageSrc="magical/weddings.png"
             title="Weddings"
             subtitle="EXCEPTIONAL WEDDINGS"
-            description="And when it comes down to choosing the most professionally managed Wedding Caterers organizers, there are not many who can stand in the same league as Modern Caterers. Modern Caterers enjoy the rare distinction of being an all-in-one organizer for all types of functions that our clients could think of hosting."
+            description="Your wedding day is one of the most important days of your life, and at Modern Meal Caterers, we ensure it’s nothing short of spectacular. From the first toast to the last bite of dessert, our wedding catering services are designed to create a culinary experience that complements the beauty and significance of your special day. We offer customizable menus that reflect your tastes and traditions, ensuring that every dish tells a part of your love story. Beyond the food, we provide elegant crockery arrangements, stunning venue beautification, and attentive service to ensure your day is flawless from start to finish."
             index={0}
           />
           <ServiceCard
             imageSrc="magical/social.png"
             title="Social"
             subtitle="SOCIAL EVENTS"
-            description="When it comes to choosing the most professionally managed caterers for social events, few can match the caliber of Modern Caterers. Modern Caterers hold the unique distinction of being an all-in-one organizer for any type of social gathering our clients could envision hosting."
+            description="Whether it’s a family reunion, a gala dinner, or a festive celebration, social events are about bringing people together—and great food is at the heart of it. Our social event catering services are tailored to create a warm, welcoming atmosphere where guests can relax and enjoy themselves. We offer a wide range of menu options, from sophisticated hors d’oeuvres to hearty main courses, all crafted to suit the occasion and your preferences. With our attention to detail and commitment to quality, your social event will be remembered for all the right reasons.
+"
             index={3}
           />
         </div>
@@ -80,14 +81,14 @@ const MagicalExperience = () => {
             imageSrc="magical/corporate.png"
             title="Corporate"
             subtitle="CORPORATE EVENTS"
-            description="In the realm of corporate events, selecting the most professionally managed catering services is crucial, and Modern Caterers stand out in this regard. Modern Caterers boast the rare distinction of being a comprehensive organizer for all types of corporate functions that our clients may need to host."
+            description="Impress your clients, partners, and employees with corporate event catering that exudes professionalism and sophistication. Whether you’re hosting a business meeting, a conference, or a corporate gala, we provide catering solutions that are as polished as your brand. Our menus are designed to fuel productivity and leave a lasting impression, with a focus on fresh, high-quality ingredients and impeccable presentation. From breakfast buffets to multi-course dinners, we handle everything, so you can focus on what matters most—your business."
             index={5}
           />
           <ServiceCard
             imageSrc="magical/birthday.png"
             title="Birthday"
             subtitle="BIRTHDAY PARTIES"
-            description="For professionally managed birthday party catering, Modern Caterers are second to none. Modern Caterers enjoy the unique distinction of being a one-stop organizer for all types of birthday celebrations that our clients wish to host."
+            description="Celebrate life’s milestones with birthday party catering that’s fun, festive, and full of flavor. At Modern Meal Caterers, we create birthday menus that delight guests of all ages, with a mix of classic favorites and exciting new dishes. Whether it’s a child’s birthday party with playful, kid-friendly options or an elegant adult celebration with gourmet cuisine, we ensure that every detail is perfect. Our team will work with you to create a menu that reflects the birthday honoree’s tastes, making their day as special as they are."
             index={6}
           />
         </div>
