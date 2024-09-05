@@ -1,21 +1,16 @@
-.container-fluid-gal {
-  padding-left: 40px;
-  padding-right: 40px;
-}
+/* GalleryPage.css */
 
+/* General Gallery Container Styles */
 .gallery-container {
   margin-bottom: 50px;
 }
 
-.img-fluid {
-  max-width: 100%;
-  height: auto;
-}
-
+/* Responsive styles for small screens */
 @media (max-width: 767.98px) {
-  .row>.col-md-3 {
+  .row > .col-md-3 {
     flex: 0 0 50%;
     max-width: 50%;
+    margin-bottom: 1rem; /* Add bottom margin to create space between rows */
   }
 
   .carousel {
@@ -25,20 +20,23 @@
   }
 }
 
+/* Responsive styles for medium and larger screens */
 @media (min-width: 768px) {
-  .row>.col-md-3 {
+  .row > .col-md-3 {
     flex: 0 0 25%;
     max-width: 25%;
+    margin-bottom: 1rem; /* Add bottom margin to create space between rows */
   }
 }
 
+/* Styles for the carousel */
 .carousel {
   margin: auto;
   max-width: 800px;
   height: 500px !important;
-  width: auto;
 }
 
+/* Carousel Indicators Styles */
 .carousel-indicators {
   bottom: -30px;
 }
@@ -53,4 +51,15 @@
 
 .carousel-indicators .active {
   background-color: darkblue;
+}
+
+/* Optional: If needed to ensure columns are not sticking together on large screens */
+.row {
+  margin-left: -0.5rem; /* Adjust negative margin based on gap size */
+  margin-right: -0.5rem; /* Adjust negative margin based on gap size */
+}
+
+.col-md-3 {
+  padding-left: 0.5rem; /* Add padding to create space between columns */
+  padding-right: 0.5rem; /* Add padding to create space between columns */
 }

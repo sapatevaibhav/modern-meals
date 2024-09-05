@@ -28,20 +28,10 @@ const imaage = () => {
       <div className="text-container">
         <h1 className=" custom-headings headline d-hline">Wedding Caterers in Pune</h1>
         <p className="paragraph custom-para">
-          In the context of this current social scenario in india, it is not
-          surprising that the demand for top quality function organizers is
-          witnessing an ever increasing trend at present. More and more families
-          are opting for professionals to take care of their special functions.
+          At Modern Meal Caterers, we believe that every event deserves a feast that delights the senses and creates lasting memories. Located in Pune, we are dedicated to crafting dining experiences that leave a lasting impression on your guests. Whether you’re planning a corporate event, a beautiful wedding, or an intimate theme party, our goal is to bring your vision to life with exceptional cuisine and top-notch service.
           <br />
           <br />
-          And when it comes down to choosing the most professionally managed
-          Wedding Caterers organizers, there are not many who can stand in the
-          same league as Modern Caterers.
-          <br />
-          <br />
-          Modern Caterers enjoy the rare distinction of being an all in one
-          organizer for all types of functions that our clients could think of
-          hosting.
+          We specialize in catering for all types of events, from large-scale corporate gatherings to personalized weddings and themed parties. Our team combines creativity, professionalism, and passion to ensure that every detail is perfect. We understand that every event is unique, and we work closely with you to create a customized menu that reflects your tastes and meets your specific needs.
         </p>
         <Link to="/contact">
           <button className="contact-button">CONTACT US</button>
