@@ -6,14 +6,14 @@ import "./Services.css";
 import { useParams } from "react-router-dom";
 
 const images = [
-  "/service_details/Indian-Wedding-Food-menu 1.png",
-  "/service_details/Indian-Wedding-Food-menu 1.png",
-  "/service_details/Indian-Wedding-Food-menu 1.png",
-  "/service_details/Indian-Wedding-Food-menu 1.png",
-  "/service_details/Indian-Wedding-Food-menu 1.png",
-  "/service_details/Indian-Wedding-Food-menu 1.png",
-  "/service_details/Indian-Wedding-Food-menu 1.png",
-  "/service_details/Indian-Wedding-Food-menu 1.png",
+  "/gellery/image44.png",
+  "/home_gallery/image_1.png",
+  "/gellery/image7.png",
+  "/gellery/image29.png",
+  "/gellery/image1.png",
+  "/gellery/image10.png",
+  "/gellery/image46.png",
+  "/gellery/image39.png",
 ];
 
 const titles = [
@@ -122,7 +122,6 @@ export default function Services() {
       sliderRef.slickGoTo(currentSlide);
     }
   }, [currentSlide]);
-
   const settings = {
     infinite: true,
     speed: 500,
@@ -144,11 +143,12 @@ export default function Services() {
         breakpoint: 768,
         settings: {
           centerPadding: "0",
+          arrows: false, 
         },
       },
     ],
   };
-
+  
   return (
     <div className="services-container">
       <h2 className="custom-headings" style={{ textAlign: "center" }}>
@@ -184,6 +184,7 @@ export default function Services() {
       </div>
     </div>
   );
+  
 }
 
 const NextArrow = (props) => {
