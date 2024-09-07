@@ -1,5 +1,6 @@
+
 .banner {
-  background-image: url('/background.png');
+  background-image: url('/gellery/long_image2.png');
   background-size: cover;
   background-position: center;
   height: 100vh;
@@ -7,11 +8,33 @@
   justify-content: center;
   align-items: center;
   position: relative;
+  text-align: center;
+}
+
+.banner-text {
+  color: white;
+}
+
+.main-title {
+  font-family: 'Tangerine', cursive;
+  font-size: 7rem;
+  font-weight: 700;
+}
+
+.subtitle {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.3rem;
 }
 
 @media (max-width: 1200px) {
   .banner {
     background-size: auto 100%;
+  }
+  .main-title {
+    font-size: 5rem;
+  }
+  .subtitle {
+    font-size: 1.3rem;
   }
 }
 
@@ -20,11 +43,23 @@
     height: 70vh;
     background-size: auto 100%;
   }
+  .main-title {
+    font-size: 4rem;
+  }
+  .subtitle {
+    font-size: 1.2rem;
+  }
 }
 
 @media (max-width: 480px) {
   .banner {
     height: 50vh;
     background-size: auto 100%;
+  }
+  .main-title {
+    font-size: 3rem;
+  }
+  .subtitle {
+    font-size: 1rem;
   }
 }
