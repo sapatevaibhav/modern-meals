@@ -45,8 +45,8 @@ img {
   margin-top: 5rem
 }
 
-.desserts {
-  margin-bottom: 30px
+.ind {
+  margin-bottom: 50px
 }
 
 .ff-sedan {
@@ -54,8 +54,7 @@ img {
   font-size: 3rem
 }
 
-.beverage-sections,
-.starters-sections {
+.beverage-sections {
   display: flex;
   flex-wrap: wrap;
   gap: 20px
@@ -79,10 +78,7 @@ img {
   margin-bottom: 5px
 }
 
-.menu-description {
-  display: block;
-  font-size: .9em
-}
+
 
 @media (max-width:768px) {
   .menu-grid {
@@ -97,10 +93,6 @@ img {
   .section,
   .starters-sections .section {
     flex: 1 1 calc(50% - 20px)
-  }
-
-  .starters-sections {
-    flex-direction: column
   }
 
   .starters-sections .section:nth-child(3) {
