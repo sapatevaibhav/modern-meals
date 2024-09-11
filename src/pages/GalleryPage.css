@@ -1,65 +1,65 @@
-/* GalleryPage.css */
-
-/* General Gallery Container Styles */
 .gallery-container {
   margin-bottom: 50px;
 }
 
-/* Responsive styles for small screens */
-@media (max-width: 767.98px) {
-  .row > .col-md-3 {
-    flex: 0 0 50%;
-    max-width: 50%;
-    margin-bottom: 1rem; /* Add bottom margin to create space between rows */
-  }
-
-  .carousel {
-    margin-right: 25px !important;
-    margin-left: 25px !important;
-    height: 300px !important;
-  }
-}
-
-/* Responsive styles for medium and larger screens */
-@media (min-width: 768px) {
-  .row > .col-md-3 {
-    flex: 0 0 25%;
-    max-width: 25%;
-    margin-bottom: 1rem; /* Add bottom margin to create space between rows */
-  }
-}
-
-/* Styles for the carousel */
 .carousel {
-  margin: auto;
+  margin: 0 auto;
   max-width: 800px;
-  height: 500px !important;
+  height: auto;
 }
 
-/* Carousel Indicators Styles */
-.carousel-indicators {
-  bottom: -30px;
-}
-
-.carousel-indicators li {
+.carousel-indicators .inactive {
   background-color: lightblue;
-  border-radius: 50%;
-  width: 12px;
-  height: 12px;
-  margin: 1px;
 }
 
 .carousel-indicators .active {
   background-color: darkblue;
 }
 
-/* Optional: If needed to ensure columns are not sticking together on large screens */
 .row {
-  margin-left: -0.5rem; /* Adjust negative margin based on gap size */
-  margin-right: -0.5rem; /* Adjust negative margin based on gap size */
+  margin-left: -0.5rem;
+  margin-right: -0.5rem;
 }
 
 .col-md-3 {
-  padding-left: 0.5rem; /* Add padding to create space between columns */
-  padding-right: 0.5rem; /* Add padding to create space between columns */
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+@media (min-width: 768px) {
+  .row > .col-md-3 {
+    flex: 0 0 25%;
+    max-width: 25%;
+    margin-bottom: 1rem;
+  }
+  .carousel {
+    margin: 0 auto;
+    height: 420px;
+  }
+}
+
+@media (min-width: 645px) and (max-width: 770px) {
+  .row > .col-md-3 {
+    flex: 0 0 50%;
+    max-width: 50%;
+    margin-bottom: 1rem;
+  }
+  .carousel {
+    margin: 0 auto;
+    height: 380px !important;
+  }
+}
+
+@media (min-width: 515px) and (max-width: 644.98px) {
+  .carousel {
+    margin: 0 auto;
+    height: 300px !important;
+  }
+}
+
+@media (max-width: 514.98px) {
+  .carousel {
+    margin: 0 auto;
+    height: 250px !important;
+  }
 }
