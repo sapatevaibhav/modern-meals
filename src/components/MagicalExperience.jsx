@@ -28,7 +28,7 @@ const ServiceCard = ({ imageSrc, title, subtitle, description, index }) => {
         >
           {subtitle}
         </h3>
-        <p className="custom-para" style={{ minHeight: "275px" }}>{description}</p>
+        <p className="custom-para" style={{ minHeight: "275px", textAlign:"justify" }}>{description}</p>
         <NavLink to={`/all_services/${index}`}>
           <button
             className="btn btn-primary"
