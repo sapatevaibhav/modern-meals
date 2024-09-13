@@ -21,16 +21,27 @@ const GetInTouch = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
-    setFormData({
-      name: "",
-      phone: "",
-      location: "",
-      email: "",
-      date: "",
-    });
-    setSubmitted(true);
-    setTimeout(() => setSubmitted(false), 3000);
+    const { name, phone, location, email, date } = formData;
+
+    if (name && phone && email) {
+
+      const mailtoLink = `mailto:a.prashant222@gmail.com?subject=Contact Form Submission&body=Name: ${encodeURIComponent(name)}%0D%0APhone: ${encodeURIComponent(phone)}%0D%0ALocation: ${encodeURIComponent(location)}%0D%0AEmail: ${encodeURIComponent(email)}%0D%0ADate: ${encodeURIComponent(date)}`;
+
+      window.location.href = mailtoLink;
+
+      setFormData({
+        name: "",
+        phone: "",
+        location: "",
+        email: "",
+        date: "",
+      });
+
+      setSubmitted(true);
+      setTimeout(() => setSubmitted(false), 3000);
+    } else {
+      alert("Please fill out all required fields.");
+    }
   };
 
   const inputStyle = {
@@ -115,7 +126,6 @@ const GetInTouch = () => {
                   width: "2.7rem",
                   height: "2.7rem",
                   marginRight: "10px",
-                  color: "white",
                 }}
               />
               <input
@@ -137,7 +147,6 @@ const GetInTouch = () => {
                   width: "2.7rem",
                   height: "2.7rem",
                   marginRight: "10px",
-                  color: "white",
                 }}
               />
               <input

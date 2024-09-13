@@ -30,8 +30,20 @@ export default function ContactComponent() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (formData.name && formData.phoneNumber && formData.email) {
-      console.log("Form submitted:", formData);
+    const { name, phoneNumber, location, email, date } = formData;
+
+    if (name && phoneNumber && email) {
+      const mailtoLink = `mailto:a.prashant222@gmail.com?subject=Contact Form Submission&body=Name: ${encodeURIComponent(name)}%0D%0APhone Number: ${encodeURIComponent(phoneNumber)}%0D%0ALocation: ${encodeURIComponent(location)}%0D%0AEmail: ${encodeURIComponent(email)}%0D%0ADate: ${encodeURIComponent(date)}`;
+
+      window.location.href = mailtoLink;
+
+      setFormData({
+        name: "",
+        phoneNumber: "",
+        location: "",
+        email: "",
+        date: "",
+      });
     } else {
       alert("Please fill out all required fields.");
     }
