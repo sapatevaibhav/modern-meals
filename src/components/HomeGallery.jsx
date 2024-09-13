@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import image1 from "/home_gallery/image_1.png";
 import image2 from "/home_gallery/image_2.png";
@@ -8,7 +8,7 @@ import image5 from "/home_gallery/image_5.png";
 import image6 from "/home_gallery/image_6.png";
 import image7 from "/home_gallery/image_7.png";
 import image8 from "/home_gallery/image_8.png";
-
+import Modal from '../pages/Modal';
 const GalleryContainer = styled.div`
   background-color: #f1f7fb;
   border-top-left-radius: 75px;
@@ -17,29 +17,28 @@ const GalleryContainer = styled.div`
   margin: 50px 30px;
   text-align: center;
 `;
-
 const Title = styled.h1`
   font-family: "Tangerine", cursive;
   color: #00148f;
   font-size: 78px;
+  margin: 0;
 `;
-
 const ImagesGrid = styled.div`
   display: grid;
-  gap: 10px;
-  justify-items: center;
-  align-items: start;
-  padding: 20px 0;
+  gap: 10px; 
   grid-template-columns: repeat(4, 1fr);
-
+  grid-auto-rows: 200px; 
+  
+  @media (min-width: 1500px) {
+    grid-template-columns: repeat(5, 1fr); 
+  }
+  
   @media (max-width: 1200px) {
     grid-template-columns: repeat(3, 1fr);
   }
-
   @media (max-width: 900px) {
     grid-template-columns: repeat(2, 1fr);
   }
-
   @media (max-width: 600px) {
     grid-template-columns: 1fr;
   }
@@ -47,61 +46,73 @@ const ImagesGrid = styled.div`
 
 const ImageWrapper = styled.div`
   width: 100%;
-  max-width: 200px;
   position: relative;
-
-  &:nth-child(odd) {
-    margin-top: 0;
-  }
-
-  &:nth-child(even) {
-    margin-top: 50px;
-  }
-
-  @media (max-width: 600px) {
-    max-width: 350px;
-    margin-top: 20px !important;
+  overflow: hidden; 
+  grid-row: span 2;
+  
+  @media (max-width: 1200px) {
+    &:nth-child(odd) {
+      grid-row: span 2;
+    }
+    &:nth-child(even) {
+      grid-row: span 1;
+    }
   }
 `;
 
 const Image = styled.img`
   width: 100%;
-  height: auto;
+  height: 100%; 
+  object-fit: cover; 
   border-radius: 10px;
+  cursor: pointer;
 `;
-
+const images = [
+  image1,
+  image2,
+  image3,
+  image4,
+  image5,
+  image6,
+  image7,
+  image8,
+];
 const Gallery = () => {
+  const [modalOpen, setModalOpen] = useState(false);
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const openModal = (index) => {
+    setCurrentIndex(index);
+    setModalOpen(true);
+  };
+  const closeModal = () => {
+    setModalOpen(false);
+  };
+  const goToPrev = () => {
+    setCurrentIndex((prevIndex) => (prevIndex === 0 ? images.length - 1 : prevIndex - 1));
+  };
+  const goToNext = () => {
+    setCurrentIndex((prevIndex) => (prevIndex === images.length - 1 ? 0 : prevIndex + 1));
+  };
   return (
-    <GalleryContainer>
-      <Title>Gallery</Title>
-      <ImagesGrid>
-        <ImageWrapper>
-          <Image src={image1} alt="Gallery Image 1" />
-        </ImageWrapper>
-        <ImageWrapper>
-          <Image src={image2} alt="Gallery Image 2" />
-        </ImageWrapper>
-        <ImageWrapper>
-          <Image src={image3} alt="Gallery Image 3" />
-        </ImageWrapper>
-        <ImageWrapper>
-          <Image src={image4} alt="Gallery Image 4" />
-        </ImageWrapper>
-        <ImageWrapper>
-          <Image src={image5} alt="Gallery Image 5" />
-        </ImageWrapper>
-        <ImageWrapper>
-          <Image src={image6} alt="Gallery Image 6" />
-        </ImageWrapper>
-        <ImageWrapper>
-          <Image src={image7} alt="Gallery Image 7" />
-        </ImageWrapper>
-        <ImageWrapper>
-          <Image src={image8} alt="Gallery Image 8" />
-        </ImageWrapper>
-      </ImagesGrid>
-    </GalleryContainer>
+    <>
+      <GalleryContainer>
+        <Title>Gallery</Title>
+        <ImagesGrid>
+          {images.map((image, index) => (
+            <ImageWrapper key={index}>
+              <Image src={image} alt={`Gallery Image ${index + 1}`} onClick={() => openModal(index)} />
+            </ImageWrapper>
+          ))}
+        </ImagesGrid>
+      </GalleryContainer>
+      <Modal
+        isOpen={modalOpen}
+        image={images[currentIndex]}
+        onClose={closeModal}
+        onPrev={goToPrev}
+        onNext={goToNext}
+      />
+    </>
   );
 };
-
 export default Gallery;
