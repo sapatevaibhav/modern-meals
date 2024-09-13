@@ -143,21 +143,6 @@ export default function ServicesPage() {
               />
             </NavLink>
           </div>
-          <div className="service-card">
-            <div className="service-text">
-              <h3>Accommodation for Guests</h3>
-              <Link to={`/all_services/${7}`} className="learn-more">
-                ← Learn More
-              </Link>
-            </div>
-            <NavLink to={`/all_services/${0}`}>
-              <img
-                src="/services/accomodation.png"
-                alt="Accommodation for Guests"
-                className="service-image"
-              />
-            </NavLink>
-          </div>
         </div>
       </div>
       <ContactComponent />

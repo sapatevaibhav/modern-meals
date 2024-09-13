@@ -13,7 +13,6 @@ const images = [
   "/gellery/image1.png",
   "/gellery/image10.png",
   "/gellery/image46.png",
-  "/gellery/image39.png",
 ];
 
 const titles = [
@@ -24,7 +23,6 @@ const titles = [
   "Crockery Arrangements",
   "Corporate Events",
   "Birthday Function",
-  "Accommodation for Guests",
 ];
 
 const subheading = [
@@ -35,7 +33,6 @@ const subheading = [
   "Crockery Arrangements",
   "Corporate Events",
   "Birthday Celebration",
-  "Accommodation for Guests",
 ];
 
 const para = [
@@ -46,71 +43,10 @@ const para = [
   "Elegant crockery arrangements are essential for a sophisticated dining experience. We provide a wide range of high-quality crockery options to complement your event's theme and decor. Our meticulous attention to detail ensures that each table setting is both visually appealing and functional, enhancing the overall dining experience for your guests and adding a touch of class to your event.",
   "Modern Caterers understands the importance of professional and seamless corporate events. We offer comprehensive event management services, from venue selection to catering and decor. Our team ensures that every aspect of your corporate event is executed flawlessly, allowing you to focus on networking and business objectives. With our expertise, your event will leave a lasting impression on clients and colleagues alike.",
   "Celebrate your birthday in style with our bespoke birthday function services. We cater to all age groups, creating fun and memorable experiences tailored to your preferences. From themed decor and entertainment to delicious catering options, we handle all the details to ensure a joyous and hassle-free celebration. Modern Caterers makes your special day even more extraordinary with personalized touches and exceptional service.",
-  "Providing comfortable accommodation for your guests is crucial for a successful event. We offer a range of lodging options to suit different needs and preferences, ensuring your guests feel welcomed and well-taken care of. Our team handles all the arrangements, from booking to check-in, allowing you to focus on enjoying your event. With Modern Caterers, your guests will have a pleasant and relaxing stay.",
+  
 ];
 
-const features = [
-  [
-    "Arranging the Venue",
-    "Light & music arrangement",
-    "Venue Decoration",
-    "Food, Snacks & Beverage Catering",
-    "Music & Live DJ",
-    "Mehndi & Bridal make-up for the girl",
-    "Live Show by renowned artists",
-    "Lodging & Travel arrangements for guests",
-    "Honeymoon package for the new Couple",
-  ],
-  [
-    "Venue Cleaning & Preparation",
-    "Floral Arrangements",
-    "Lighting Design",
-    "Furniture Setup",
-    "Thematic Decor",
-  ],
-  [
-    "Jaimala Design & Customization",
-    "Entertainment Acts",
-    "Stage Setup",
-    "Costume Design for Performers",
-    "Audio & Visual Equipment",
-  ],
-  [
-    "Theme Conceptualization",
-    "Decorative Elements",
-    "Costume Coordination",
-    "Thematic Music & Activities",
-    "Guest Invitations & Management",
-  ],
-  [
-    "Selection of Crockery",
-    "Table Setting",
-    "Glassware & Cutlery Arrangement",
-    "Quality Check & Cleaning",
-    "Replacement & Maintenance",
-  ],
-  [
-    "Venue Selection & Booking",
-    "Event Planning & Coordination",
-    "Audiovisual Equipment Setup",
-    "Catering Services",
-    "Guest Management & Registration",
-  ],
-  [
-    "Party Theme Design",
-    "Cake & Dessert Arrangements",
-    "Entertainment & Games",
-    "Invitations & RSVPs",
-    "Gift Management",
-  ],
-  [
-    "Hotel Booking & Coordination",
-    "Transportation Arrangements",
-    "Room Assignments & Preferences",
-    "Welcome Packages",
-    "Check-in & Check-out Services",
-  ],
-];
+
 
 export default function Services() {
   const { index } = useParams();
