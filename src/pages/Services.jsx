@@ -143,12 +143,12 @@ export default function Services() {
         breakpoint: 768,
         settings: {
           centerPadding: "0",
-          arrows: false, 
+          arrows: false,
         },
       },
     ],
   };
-  
+
   return (
     <div className="services-container">
       <h2 className="custom-headings" style={{ textAlign: "center" }}>
@@ -163,28 +163,19 @@ export default function Services() {
         ))}
       </Slider>
       <div className="bottom-section">
-        <div className="features">
-          <h3 className="cust-font">Other Features Included</h3>
-          <ul className="disc">
-            {features[currentSlide].map((feature, index) => (
-              <li className="cust-roboto" key={index}>
-                {feature}
-              </li>
-            ))}
-          </ul>
-        </div>
+
         <div className="details">
           <h3 className="cust-font" style={{ textAlign: "center" }}>
             {subheading[currentSlide]}
           </h3>
-          <p className="cust-roboto" style={{ textAlign: "justify" }}>
+          <p className="cust-roboto" style={{ textAlign: "justify", margin:"25px" }}>
             {para[currentSlide]}
           </p>
         </div>
       </div>
     </div>
   );
-  
+
 }
 
 const NextArrow = (props) => {

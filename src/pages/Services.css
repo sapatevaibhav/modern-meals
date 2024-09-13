@@ -69,10 +69,10 @@
   margin-bottom: 5px;
 }
 
-.disc {
+/* .disc {
   list-style-type: disc !important;
   margin-left: 20px;
-}
+} */
 
 .cust-font {
   color: #00148f;
@@ -86,9 +86,9 @@
   font-size: 1rem !important;
 }
 
-.features {
+/* .features {
   flex: 1;
-}
+} */
 
 .details {
   flex: 1.5;
@@ -99,8 +99,7 @@
     flex-direction: column;
   }
 
-  .details,
-  .features {
+  .details {
     width: 100%;
   }
 
