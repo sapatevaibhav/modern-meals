@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import "./GalleryPage.css";
 import GalleryComponent from "./GalleryComponent";
+import Modal from './Modal';
+
 const images = [
   "gellery/image7.png",
   "gellery/image8.png",
@@ -59,6 +61,8 @@ const ca_images = [
 export default function GalleryPage() {
   const [loading, setLoading] = useState(true);
   const [activeIndex, setActiveIndex] = useState(0);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [currentImage, setCurrentImage] = useState('');
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -71,54 +75,50 @@ export default function GalleryPage() {
     setActiveIndex(index);
   };
 
+  const openModal = (image) => {
+    setCurrentImage(image);
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
+
+  const handlePrev = () => {
+    const currentIndex = images.indexOf(currentImage);
+    if (currentIndex > 0) {
+      setCurrentImage(images[currentIndex - 1]);
+    }
+  };
+
+  const handleNext = () => {
+    const currentIndex = images.indexOf(currentImage);
+    if (currentIndex < images.length - 1) {
+      setCurrentImage(images[currentIndex + 1]);
+    }
+  };
+
   return (
     <div>
-      <p
-        className="center-text mt-5"
-        style={{ fontFamily: "sedan", fontSize: "1.2rem" }}
-      >
+      <p className="center-text mt-5" style={{ fontFamily: 'sedan', fontSize: '1.2rem' }}>
         Gallery
       </p>
-      <h2 className="custom-headings" style={{ textAlign: "center" }}>
+      <h2 className="custom-headings" style={{ textAlign: 'center' }}>
         Menu Make You Happy
       </h2>
-      <p
-        className="center-text"
-        style={{
-          fontFamily: "roboto",
-          fontSize: "1.2rem",
-          fontWeight: "bold",
-          marginBottom: "50px",
-        }}
-      >
+      <p className="center-text" style={{ fontFamily: 'roboto', fontSize: '1.2rem', fontWeight: 'bold', marginBottom: '50px' }}>
         Some Food with lots of Love
       </p>
 
       <div className="container-fluid gallery-container">
-        
-         
-          <GalleryComponent images={images} />
+        <GalleryComponent images={images} onImageClick={openModal} />
       </div>
 
-      {/* Long Images Carousel */}
-      <div
-        id="carouselExampleIndicators"
-        className="carousel slide"
-        data-bs-ride="carousel"
-      >
+      <div id="carouselExampleIndicators" className="carousel slide" data-bs-ride="carousel">
         <div className="carousel-inner">
           {ca_images.map((image, index) => (
-            <div
-              key={index}
-              className={`carousel-item ${
-                index === activeIndex ? "active" : ""
-              }`}
-            >
-              <img
-                src={image}
-                className="d-block w-100"
-                alt={`Slide ${index + 1}`}
-              />
+            <div key={index} className={`carousel-item ${index === activeIndex ? 'active' : ''}`}>
+              <img src={image} className="d-block w-100" alt={`Slide ${index + 1}`} />
             </div>
           ))}
         </div>
@@ -138,6 +138,14 @@ export default function GalleryPage() {
           ))}
         </div>
       </div>
+
+      <Modal
+        isOpen={isModalOpen}
+        image={currentImage}
+        onClose={closeModal}
+        onPrev={handlePrev}
+        onNext={handleNext}
+      />
     </div>
   );
 }

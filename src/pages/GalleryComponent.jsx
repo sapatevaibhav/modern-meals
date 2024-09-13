@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-const GalleryComponent = ({ images }) => {
+const GalleryComponent = ({ images, onImageClick }) => {
   const [loaded, setLoaded] = useState(false);
 
   // Simulate loading
@@ -27,7 +27,8 @@ const GalleryComponent = ({ images }) => {
                 src={image}
                 alt={`Gallery ${index}`}
                 className="img-fluid"
-                style={{ objectFit: 'cover', width: '100%', height: '200px' }}
+                style={{ objectFit: 'cover', width: '100%', height: '200px', cursor: 'pointer' }}
+                onClick={() => onImageClick(image)}
               />
             )}
           </div>
